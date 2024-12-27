@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tournesol trace</title>
     <script src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"></script>
+    <script src="lib/maplibre-gl-measures.js"></script>
     <link href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
 </head>
 <body>
@@ -16,8 +17,20 @@
             center: [15.66, 46.07], // starting position [lng, lat]
             zoom: 4 // starting zoom
         });
+        // plus de fonds ici : https://medium.com/@go2garret/free-basemap-tiles-for-maplibre-18374fab60cb
 
-        map.on('load', () => {
+        // add zoom controls
+        map.addControl(new maplibregl.NavigationControl());
+
+        // add scale
+        let scale = new maplibregl.ScaleControl({
+            maxWidth: 80,
+            unit: 'imperial',
+        });
+        map.addControl(scale, 'bottom-right');
+        scale.setUnit('metric');
+
+        map.on('load', () => {           
             map.addSource('traces', {
                 type:'geojson',
                 data:'data/traces.geojson'
