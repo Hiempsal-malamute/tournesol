@@ -23,15 +23,15 @@
     "lat": 41.3828939,
     "long": 2.1774322,
     "city": "Barcelona",
-    "origin":
-    {
-        "city":{
-            "co2_train":0,
-            "co2_avion":0,
-            "co2_bus":0,
-            "commentaire":""
-        }
-    }
+    "origin":[
+      {
+        "from":"Paris",
+        "commentaire":"Train de nuit direct",
+        "co2_train":0,
+        "co2_avion":0,
+        "co2_bus":0
+      }
+    ]
   },
   {
     "fid": 3,
