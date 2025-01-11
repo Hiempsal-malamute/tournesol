@@ -24,7 +24,7 @@ body, html {
     max-height: 80%; /* Ensure the panel never exceeds 80% of screen height */
     background-color: #fff;
     border-top: 1px solid #ddd;
-    border-radius: 12px 12px 0 0;
+    border-radius: 40px 40px 0 0;
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
@@ -67,3 +67,18 @@ body, html {
     }
   }
   
+  /* options villes */
+  .ville-option {
+    cursor: pointer;
+    margin: 20px;
+    background-color: #ccc;
+  }
+
+  #fiche-ville {
+    display: none;
+    background: #ddd;
+  }
+
+  #back {
+    display: none;
+  }

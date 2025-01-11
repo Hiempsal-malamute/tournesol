@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobile Map with Bottom Panel</title>
+  <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.css' />
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,8 +13,13 @@
   <div id="bottom-panel">
     <div id="drag-handle"></div>
     <div id="panel-content">
-      <h2>Panel Content</h2>
-      <p>This is the bottom panel. Drag it up or down!</p>
+      <div id="intro">
+        <h2>Tournesol</h2>
+        <p>Envie de pédaler avec nous ? Choisis la ville où tu veux nous rejoindre sur la carte ou la liste ci-dessous et on t'expliquera comment y aller sans prise de tête :)</p>
+        <div id="liste-ville"></div>
+      </div>
+      <div id="fiche-ville"></div>
+      <button id="back">Back</button>
     </div>
   </div>
   <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>

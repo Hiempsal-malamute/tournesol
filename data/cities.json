@@ -1,0 +1,427 @@
+[
+  {
+    "fid": 1,
+    "ville": "Perpignan",
+    "pays": "France",
+    "lat": 42.6985304,
+    "long": 2.8953121,
+    "city": "Perpignan",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 2,
+    "ville": "Barcelone",
+    "pays": "Espagne",
+    "lat": 41.3828939,
+    "long": 2.1774322,
+    "city": "Barcelona",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 3,
+    "ville": "Séville",
+    "pays": "Espagne",
+    "lat": 37.3886303,
+    "long": -5.9953403,
+    "city": "Sevilla",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 4,
+    "ville": "Lisbonne",
+    "pays": "Portugal",
+    "lat": 38.7077507,
+    "long": -9.1365919,
+    "city": "Lisboa",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 5,
+    "ville": "Bordeaux",
+    "pays": "France",
+    "lat": 44.841225,
+    "long": -0.5800364,
+    "city": "Bordeaux",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 6,
+    "ville": "Cahors",
+    "pays": "France",
+    "lat": 44.4495,
+    "long": 1.4364999,
+    "city": "Cahors",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 7,
+    "ville": "Lyon",
+    "pays": "France",
+    "lat": 45.7578137,
+    "long": 4.8320114,
+    "city": "Lyon",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 8,
+    "ville": "Dijon",
+    "pays": "France",
+    "lat": 47.3215806,
+    "long": 5.0414701,
+    "city": "Dijon",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 9,
+    "ville": "Besançon",
+    "pays": "France",
+    "lat": 47.2380222,
+    "long": 6.0243622,
+    "city": "Besançon",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 10,
+    "ville": "Belfort",
+    "pays": "France",
+    "lat": 47.6379599,
+    "long": 6.8628942,
+    "city": "Belfort",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 11,
+    "ville": "Basel",
+    "pays": "Suisse",
+    "lat": 47.5581077,
+    "long": 7.5878261,
+    "city": "Basel",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 12,
+    "ville": "Constance",
+    "pays": "Allemagne",
+    "lat": 47.659216,
+    "long": 9.1750718,
+    "city": "Konstanz",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 13,
+    "ville": "Munich",
+    "pays": "Allemagne",
+    "lat": 48.1371079,
+    "long": 11.5753822,
+    "city": "München",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 14,
+    "ville": "Vienne",
+    "pays": "Autriche",
+    "lat": 48.2083537,
+    "long": 16.3725042,
+    "city": "Wien",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 15,
+    "ville": "Bratislava",
+    "pays": "Slovaquie",
+    "lat": 48.1516988,
+    "long": 17.1093063,
+    "city": "Bratislava",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 16,
+    "ville": "Budapest",
+    "pays": "Hongrie",
+    "lat": 47.48138955,
+    "long": 19.1460941269125,
+    "city": "Budapest",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 17,
+    "ville": "Belgrade",
+    "pays": "Serbie",
+    "lat": 44.8178131,
+    "long": 20.4568974,
+    "city": "Београд",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 18,
+    "ville": "Bucarest",
+    "pays": "Roumanie",
+    "lat": 44.4361414,
+    "long": 26.1027202,
+    "city": "București",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 19,
+    "ville": "Istanbul",
+    "pays": "Turquie",
+    "lat": 41.0766019,
+    "long": 29.052495,
+    "city": "İstanbul",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 20,
+    "ville": "Athènes",
+    "pays": "Grèce",
+    "lat": 37.9755648,
+    "long": 23.7348324,
+    "city": "Αθήνα",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 21,
+    "ville": "Durres",
+    "pays": "Albanie",
+    "lat": 41.313255,
+    "long": 19.4462348,
+    "city": "Bashkia Durrës",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 22,
+    "ville": "Split",
+    "pays": "Croatie",
+    "lat": 43.5116383,
+    "long": 16.4399659,
+    "city": "Split",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 23,
+    "ville": "Ljubljana",
+    "pays": "Slovénie",
+    "lat": 46.0500268,
+    "long": 14.5069289,
+    "city": "Ljubljana",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 24,
+    "ville": "Grenoble",
+    "pays": "France",
+    "lat": 45.1875602,
+    "long": 5.7357819,
+    "city": "Grenoble",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  },
+  {
+    "fid": 25,
+    "ville": "Podgorica",
+    "pays": "Monténégro",
+    "lat": 42.4415238,
+    "long": 19.2621081,
+    "city": "Podgorica",
+    "origin":
+    {
+        "city":{
+            "co2_train":0,
+            "co2_avion":0,
+            "co2_bus":0,
+            "commentaire":""
+        }
+    }
+  }
+]
