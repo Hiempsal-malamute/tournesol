@@ -8,7 +8,7 @@ const dragHandle = document.getElementById('drag-handle');
 
 let startY;
 let isDragging = false;
-const panelMinHeight = 200; // Default panel height
+const panelMinHeight = 300; // Default panel height
 const panelMaxHeight = window.innerHeight * 0.8; // 80% of screen height
 
 // Check if it's a mobile device
