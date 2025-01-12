@@ -187,23 +187,44 @@ async function main() {
       .addTo(map);
       
       marker.getElement().addEventListener('click', () => {
-        showFiche(e.fid, data)
+        urlSearchParams.set('id_ville', e.fid)
+        window.history.pushState({}, '', url);
+        // showFiche(e.fid, data)
       })
     })
 
     listeVilles.addEventListener("click", elem => {
       ville = elem.target
-      if(elem.target && elem.target.className == "ville-option") {
-        showFiche(ville.id, data)
+      if(ville && ville.className == "ville-option") {
+        urlSearchParams.set('id_ville', ville.id)
+        window.history.pushState({}, '', url);
+        // showFiche(ville.id, data)
       }
     });
   })
 
+  window.navigation.addEventListener('navigate', (e) => {
+    id = urlSearchParams.get('id_ville')
+    console.log(id)
+    console.log(e.navigationType)
+    
+    if(e.navigationType == 'traverse') {
+      hideFiche()
+    }
+
+    if(e.navigationType == 'push') {
+      showFiche(id, data)
+    }
+  })
+  
   backBtn.addEventListener('click', () => {
     hideFiche()
   })
   
   function showFiche(id, data) {
+    urlSearchParams.set('id_ville', id)
+    window.history.pushState({}, '', url);
+
     listeVilles.style.display = 'none'
     ficheVille.style.display = 'block'
     backBtn.style.display = 'block'
@@ -230,7 +251,7 @@ async function main() {
     backBtn.style.display = 'none'
 
     ficheVille.innerHTML = ''
-  
+    
     fitGeoJsonBounds(map, 'data/traces.geojson');
   }
 }
@@ -238,5 +259,8 @@ async function main() {
 const listeVilles = document.getElementById('liste-ville')
 const ficheVille = document.getElementById('fiche-ville')
 const backBtn = document.getElementById('back')
+
+const url = new URL(window.location.href);
+const urlSearchParams = url.searchParams;
 
 main()
