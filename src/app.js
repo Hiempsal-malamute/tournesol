@@ -201,7 +201,6 @@ async function main() {
         <div class="ville-option" id="${e['fid']}">
           <h4 class="ville-option">${e['ville']}</h4>
           <span>${e['pays']}</span>
-          <span>${e['origin']['city']['co2_train']}</span>
         </div>
       `
       const marker = new maplibregl.Marker()
@@ -233,16 +232,23 @@ async function main() {
     filtered = data.find(e => e.fid == id)
     map.flyTo({center: [filtered.long, filtered.lat], zoom: 9});
 
-    console.log(filtered)
-
-    ficheVille.innerHTML += `
-    <div>COUCOU</div>
-    `
+    filtered['origins'].forEach(e => {
+      ficheVille.innerHTML += `
+      <div>
+        <p>Depuis ${e['from']} :</p>
+        <span><i>${e['commentaire']}</i></span>
+        <h2>Et ton bilan carbone alors ? è_é</h2>
+        <p><b>En avion : </b>${e['co2eq_avion']} :</p>
+        <p><b>En train : </b>${e['co2eq_train']} :</p>
+      </div>
+      `
+    })
   }
   
   function hideFiche() {
     listeVilles.style.display = 'block'
     ficheVille.style.display = 'none'
+    backBtn.style.display = 'none'
 
     ficheVille.innerHTML = ''
   
