@@ -166,40 +166,19 @@ async function main() {
   
   
   });
-  
-  // map.on('load', () => {
-  //     map.addSource('cities', {
-  //         type:'geojson',
-  //         data:'data/cities.geojson'
-  //     });
-  
-  //     map.addLayer({
-  //         id:'cities-layer',
-  //         type:'circle',
-  //         source:'cities',
-  //         // 'layout': {
-  //         //     'line-join': 'round',
-  //         //     'line-cap': 'round'
-  //         // },
-  //         // 'paint': {
-  //         //     'line-color': 'rgb(244,102,27)',
-  //         //     'line-width': 5
-  //         // }
-  //     });
-  
-  // })
 
   fitGeoJsonBounds(map, 'data/traces.geojson');
 
+  let data;
   fetch("data/cities.json")
   .then(res => res.json())
-  .then(data => {
-
+  .then(res => {
+    data = res
     data.forEach(e => {
 
       listeVilles.innerHTML += `
         <div class="ville-option" id="${e['fid']}">
-          <h4 class="ville-option">${e['ville']}</h4>
+          <h4>${e['ville']}</h4>
           <span>${e['pays']}</span>
         </div>
       `
@@ -243,7 +222,7 @@ async function main() {
       </div>
       `
     })
-  }
+  } 
   
   function hideFiche() {
     listeVilles.style.display = 'block'

@@ -82,3 +82,7 @@ body, html {
   #back {
     display: none;
   }
+
+  .ville-option > * {
+    pointer-events: none
+  }
