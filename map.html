@@ -9,18 +9,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="map"></div>
-  <div id="bottom-panel">
-    <div id="drag-handle"></div>
-    <div id="panel-content">
-      <div id="intro">
+  <div class="container">
+    <div class="panel" id="panel">
+      <div class="panel-header" id="panel-header">
+        <div class="mobile-bar" id="mobile-bar"></div>
         <h2>Tournesol</h2>
         <p>Envie de pédaler avec nous ? Choisis la ville où tu veux nous rejoindre sur la carte ou la liste ci-dessous et on t'expliquera comment y aller sans prise de tête :)</p>
-        <div id="liste-ville"></div>
       </div>
-      <button id="back">Back</button>
-      <div id="fiche-ville"></div>
+      <div class="panel-content" id="panel-content">
+        <div id="liste-ville"></div>
+        <button id="back">Back</button>
+        <div id="fiche-ville"></div>
+      </div>
     </div>
+    <div id="map"></div>
   </div>
   <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
   <script src="src/app.js"></script>

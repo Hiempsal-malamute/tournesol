@@ -2,90 +2,51 @@
 /                      PANEL                      /  
 /////////////////////////////////////////////////*/
 
+const panel = document.getElementById('panel');
+const panelHeader = document.getElementById('panel-header');
+const panelContent = document.getElementById('panel-content');
 
-const bottomPanel = document.getElementById('bottom-panel');
-const dragHandle = document.getElementById('drag-handle');
+let startY = 0;
+let currentHeight = 10;
 
-let startY;
-let isDragging = false;
-const panelMinHeight = 300; // Default panel height
-const panelMaxHeight = window.innerHeight * 0.8; // 80% of screen height
-
-// Check if it's a mobile device
-function isMobileView() {
-  return window.innerWidth < 768;
-}
-
-// Adjust panel snapping and ensure it stays within bounds
-function adjustMobilePanel() {
-  const currentTransform = parseInt(
-    window.getComputedStyle(bottomPanel).transform.split(',')[5] || 0
-  );
-
-  // If the panel is dragged more than halfway up, snap to max height (80%)
-  if (currentTransform < -panelMaxHeight / 2) {
-    bottomPanel.style.transform = `translateY(-${panelMaxHeight - panelMinHeight}px)`;
-    bottomPanel.style.height = `${panelMaxHeight}px`;
-  } else {
-    // Snap back to the default closed height
-    bottomPanel.style.transform = 'translateY(0)';
-    bottomPanel.style.height = `${panelMinHeight}px`;
-  }
-}
-
-// Dragging logic for mobile
-if (isMobileView()) {
-  dragHandle.addEventListener('mousedown', (e) => {
-    startY = e.clientY;
-    isDragging = true;
-    document.body.style.userSelect = 'none';
-  });
-
-  dragHandle.addEventListener('touchstart', (e) => {
-    startY = e.touches[0].clientY;
-    isDragging = true;
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const deltaY = e.clientY - startY;
-    const newTransform = Math.min(0, Math.max(-panelMaxHeight + panelMinHeight, deltaY));
-    bottomPanel.style.transform = `translateY(${newTransform}px)`;
-  });
-
-  document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const deltaY = e.touches[0].clientY - startY;
-    const newTransform = Math.min(0, Math.max(-panelMaxHeight + panelMinHeight, deltaY));
-    bottomPanel.style.transform = `translateY(${newTransform}px)`;
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    document.body.style.userSelect = '';
-    adjustMobilePanel();
-  });
-
-  document.addEventListener('touchend', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    adjustMobilePanel();
-  });
-}
-
-// Disable dragging and reset panel height for desktop
-window.addEventListener('resize', () => {
-  if (!isMobileView()) {
-    bottomPanel.style.transform = 'translateY(0)';
-    bottomPanel.style.height = '100%';
-    isDragging = false;
-  } else {
-    // Recalculate max height for mobile
-    bottomPanel.style.height = `${panelMinHeight}px`;
-  }
+// Handle touchstart event for dragging
+panel.addEventListener('touchstart', (e) => {
+  startY = e.touches[0].clientY;
+  currentHeight = parseInt(getComputedStyle(panel).height, 10) / window.innerHeight * 100;
 });
 
+// Handle touchmove event for dragging
+panel.addEventListener('touchmove', (e) => {
+  const deltaY = startY - e.touches[0].clientY;
+  let newHeight = currentHeight + (deltaY / window.innerHeight) * 100;
+  newHeight = Math.max(10, Math.min(90, newHeight));
+  panel.style.height = `${newHeight}%`;
+});
+
+// Handle touchend event to snap to open/close state
+panel.addEventListener('touchend', () => {
+  openPanel()
+});
+
+function openPanel(finalHeight) {
+  if (!finalHeight) {
+    const finalHeight = parseInt(getComputedStyle(panel).height, 10) / window.innerHeight * 100;
+    panel.style.height = finalHeight + '%'
+    if(finalHeight < '40%') {
+      panel.style.height = '20%';
+      panelContent.style.display = 'none';
+    }
+  } else {
+    panel.style.height = finalHeight + '%'
+  }
+  // if (finalHeight > 50) {
+  //   panel.style.height = '90%';
+  //   panelContent.style.display = 'block';
+  // } else {
+  //   panel.style.height = '20%';
+  //   panelContent.style.display = 'none';
+  // }
+}
 
 /*/////////////////////////////////////////////////
 /                   MAP CONF                      /  
@@ -123,6 +84,7 @@ async function main() {
       style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json', // style URL
       // center: [15.66, 46.07], // starting position [lng, lat]
       // zoom: 4 // starting zoom
+      attributionControl: false
   });
   // plus de fonds ici : https://medium.com/@go2garret/free-basemap-tiles-for-maplibre-18374fab60cb
   
@@ -135,8 +97,8 @@ async function main() {
       unit: 'imperial',
   });
   
-  map.addControl(scale, 'bottom-right');
-  scale.setUnit('metric');
+  // map.addControl(scale, 'bottom-right');
+  // scale.setUnit('metric');
   
   
   /*/////////////////////////////////////////////////
@@ -243,6 +205,8 @@ async function main() {
       </div>
       `
     })
+
+    openPanel(70)
   } 
   
   function hideFiche() {
@@ -253,6 +217,8 @@ async function main() {
     ficheVille.innerHTML = ''
     
     fitGeoJsonBounds(map, 'data/traces.geojson');
+
+    openPanel(20)
   }
 }
 
