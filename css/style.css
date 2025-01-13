@@ -30,7 +30,6 @@ body {
   border-top-right-radius: 60px;
   border-top-left-radius: 60px;
   z-index: 1000;
-  overflow: auto;
 }
 
 .panel-header {
@@ -84,6 +83,11 @@ body {
   #back {
     display: none;
   }
+
+.liste-ville{
+    overflow:auto
+  }
+
 
   .ville-option > * {
     pointer-events: none
