@@ -103,7 +103,12 @@ async function main() {
         });
     
         // Fit the map to the bounds
-        map.fitBounds(bounds, { padding: 200 });
+        if(!isMobile()) {
+          padding = 200
+          map.fitBounds(bounds, { padding: {top: padding, bottom:padding, left: padding*4.5, right: padding} });
+        } else {
+          map.fitBounds(bounds, { padding: 75 });
+        }
       } catch (error) {
         console.error('Error fitting GeoJSON bounds:', error);
       }
