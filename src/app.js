@@ -227,9 +227,6 @@ async function main() {
   })
   
   function showFiche(id, data) {
-    urlSearchParams.set('id_ville', id)
-    window.history.pushState({}, '', url);
-
     listeVilles.style.display = 'none'
     ficheVille.style.display = 'block'
     backBtn.style.display = 'block'
