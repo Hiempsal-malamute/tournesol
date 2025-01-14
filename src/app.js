@@ -1,52 +1,84 @@
-/*/////////////////////////////////////////////////
-/                      PANEL                      /  
-/////////////////////////////////////////////////*/
-
 const panel = document.getElementById('panel');
 const panelHeader = document.getElementById('panel-header');
-const panelContent = document.getElementById('panel-content');
+const mobileBar = document.getElementById('mobile-bar');
 
 let startY = 0;
-let currentHeight = 10;
+let currentHeight = 20; // Start height in percentage
+let velocity = 0;
+let animationFrame;
 
-// Handle touchstart event for dragging
-panel.addEventListener('touchstart', (e) => {
-  startY = e.touches[0].clientY;
-  currentHeight = parseInt(getComputedStyle(panel).height, 10) / window.innerHeight * 100;
-});
-
-// Handle touchmove event for dragging
-panel.addEventListener('touchmove', (e) => {
-  const deltaY = startY - e.touches[0].clientY;
-  let newHeight = currentHeight + (deltaY / window.innerHeight) * 100;
-  newHeight = Math.max(10, Math.min(90, newHeight));
-  panel.style.height = `${newHeight}%`;
-});
-
-// Handle touchend event to snap to open/close state
-panel.addEventListener('touchend', () => {
-  openPanel()
-});
-
-function openPanel(finalHeight) {
-  if (!finalHeight) {
-    const finalHeight = parseInt(getComputedStyle(panel).height, 10) / window.innerHeight * 100;
-    panel.style.height = finalHeight + '%'
-    if(finalHeight < '40%') {
-      panel.style.height = '20%';
-      panelContent.style.display = 'none';
-    }
-  } else {
-    panel.style.height = finalHeight + '%'
-  }
-  // if (finalHeight > 50) {
-  //   panel.style.height = '90%';
-  //   panelContent.style.display = 'block';
-  // } else {
-  //   panel.style.height = '20%';
-  //   panelContent.style.display = 'none';
-  // }
+function isMobile() {
+  return window.innerWidth < 768;
 }
+
+function adjustPanelLayout() {
+  if (isMobile()) {
+    panel.classList.add('mobile');
+    panel.classList.remove('desktop');
+    panel.style.height = `${currentHeight}%`;
+    panel.style.width = '100%';
+    panel.style.left = '0';
+    mobileBar.style.display = 'block'
+  } else {
+    panel.classList.add('desktop');
+    panel.classList.remove('mobile');
+    panel.style.width = '500px';
+    panel.style.height = '100%';
+    panel.style.left = '0';
+    mobileBar.style.display = 'none'
+  }
+}
+
+panelHeader.addEventListener('touchstart', (e) => {
+  if (!isMobile()) return;
+  startY = e.touches[0].clientY;
+  cancelAnimationFrame(animationFrame);
+  velocity = 0;
+});
+
+panelHeader.addEventListener('touchmove', (e) => {
+  if (!isMobile()) return;
+  const deltaY = startY - e.touches[0].clientY;
+  currentHeight = Math.min(90, Math.max(20, currentHeight + (deltaY / window.innerHeight) * 100));
+  panel.style.height = `${currentHeight}%`;
+  velocity = deltaY / (e.timeStamp || 1);
+  startY = e.touches[0].clientY;
+});
+
+panelHeader.addEventListener('touchend', () => {
+  if (!isMobile()) return;
+  let snapTo;
+  if (velocity > 0) {
+    snapTo = Math.ceil(currentHeight / 10) * 10;
+  } else {
+    snapTo = Math.floor(currentHeight / 10) * 10;
+    if (snapTo === 20) {
+      snapTo = 25; // Add slight bounce back
+      setTimeout(() => {
+        panel.style.height = '20%'; // Reset to minimum after bounce
+      }, 200);
+    }
+  }
+
+  const animate = () => {
+    currentHeight += (snapTo - currentHeight) * 0.2;
+    panel.style.height = `${currentHeight}%`;
+    if (Math.abs(snapTo - currentHeight) > 0.5) {
+      animationFrame = requestAnimationFrame(animate);
+    }
+  };
+  animate();
+});
+
+window.addEventListener('resize', adjustPanelLayout);
+adjustPanelLayout();
+
+const map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+  center: [0, 0],
+  zoom: 2,
+});
 
 /*/////////////////////////////////////////////////
 /                   MAP CONF                      /  
