@@ -103,7 +103,7 @@ async function main() {
         });
     
         // Fit the map to the bounds
-        map.fitBounds(bounds, { padding: 100 });
+        map.fitBounds(bounds, { padding: 200 });
       } catch (error) {
         console.error('Error fitting GeoJSON bounds:', error);
       }
@@ -230,6 +230,10 @@ async function main() {
     listeVilles.style.display = 'none'
     ficheVille.style.display = 'block'
     backBtn.style.display = 'block'
+    if(isMobile()) {
+      intro.style.display = 'none'
+    }
+
   
     filtered = data.find(e => e.fid == id)
 
@@ -242,20 +246,20 @@ async function main() {
       offset: [0, paddingBottomMarker],
     });
     
-    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2>`
-
+    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2><span>${filtered['pays']}</span>`
+    ficheVille.innerHTML += `<h4>Et ton bilan carbone alors ? è_é</h4>`
+    
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
       <div>
         <p>Depuis ${e['from']} :</p>
         <span><i>${e['commentaire']}</i></span>
-        <h2>Et ton bilan carbone alors ? è_é</h2>
         <p><b>En avion : </b>${e['co2eq_avion']} :</p>
         <p><b>En train : </b>${e['co2eq_train']} :</p>
       </div>
       `
     })
-
+      
     if (isMobile()) {
       panel.style.height = `${80}%`;
     }
@@ -265,6 +269,9 @@ async function main() {
     listeVilles.style.display = 'block'
     ficheVille.style.display = 'none'
     backBtn.style.display = 'none'
+    if(isMobile()) {
+      intro.style.display = 'block'
+    }
 
     ficheVille.innerHTML = ''
     
@@ -279,6 +286,7 @@ async function main() {
 const listeVilles = document.getElementById('liste-ville')
 const ficheVille = document.getElementById('fiche-ville')
 const backBtn = document.getElementById('back')
+const intro = document.getElementById('intro')
 
 const url = new URL(window.location.href);
 const urlSearchParams = url.searchParams;
