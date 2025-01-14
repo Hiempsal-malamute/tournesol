@@ -1,6 +1,5 @@
 const panel = document.getElementById('panel');
 const panelHeader = document.getElementById('panel-header');
-const mobileBar = document.getElementById('mobile-bar');
 
 let startY = 0;
 let currentHeight = 20; // Start height in percentage
@@ -18,14 +17,12 @@ function adjustPanelLayout() {
     panel.style.height = `${currentHeight}%`;
     panel.style.width = '100%';
     panel.style.left = '0';
-    mobileBar.style.display = 'block'
   } else {
     panel.classList.add('desktop');
     panel.classList.remove('mobile');
     panel.style.width = '500px';
     panel.style.height = '100%';
     panel.style.left = '0';
-    mobileBar.style.display = 'none'
   }
 }
 
@@ -187,6 +184,7 @@ async function main() {
         markerElement.style.height = '40px';
         return markerElement;
       }
+
       const marker = new maplibregl.Marker({
         element: createCustomMarker('assets/picto-formes-tournesol_39.png')
       })
@@ -199,10 +197,12 @@ async function main() {
         // showFiche(e.fid, data)
       })
     })
-
+    let i = 0
     listeVilles.addEventListener("click", elem => {
+      i++;
       ville = elem.target
       if(ville && ville.className == "ville-option") {
+        console.log(i)
         urlSearchParams.set('id_ville', ville.id)
         window.history.pushState({}, '', url);
         // showFiche(ville.id, data)
@@ -212,8 +212,6 @@ async function main() {
 
   window.navigation.addEventListener('navigate', (e) => {
     id = urlSearchParams.get('id_ville')
-    console.log(id)
-    console.log(e.navigationType)
     
     if(e.navigationType == 'traverse') {
       hideFiche()
@@ -237,7 +235,17 @@ async function main() {
     backBtn.style.display = 'block'
   
     filtered = data.find(e => e.fid == id)
-    map.flyTo({center: [filtered.long, filtered.lat], zoom: 9});
+
+    let paddingBottomMarker
+    if( isMobile()) { paddingBottomMarker = -330 } else { paddingBottomMarker = 0}
+
+    map.flyTo({
+      center: [filtered.long, filtered.lat], 
+      zoom: 9,
+      offset: [0, paddingBottomMarker],
+    });
+    
+    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2>`
 
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
