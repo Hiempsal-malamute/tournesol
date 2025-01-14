@@ -70,13 +70,15 @@ body {
 /* options villes */
 .ville-option {
   cursor: pointer;
-  margin: 20px;
-  background-color: #ccc;
+  background-color: #b1f3b6;
+  color:#0b4e44;
+  border-radius: 20px;
+  padding-left: 5px;
 }
 
 #fiche-ville {
   display: none;
-  background: #ddd;
+  background: #b1f3b6;
 }
 
 #back {

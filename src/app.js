@@ -70,6 +70,7 @@ panelHeader.addEventListener('touchend', () => {
   animate();
 });
 
+
 window.addEventListener('resize', adjustPanelLayout);
 adjustPanelLayout();
 
@@ -176,7 +177,19 @@ async function main() {
           <span>${e['pays']}</span>
         </div>
       `
-      const marker = new maplibregl.Marker()
+
+      // Function to create the custom marker element
+      function createCustomMarker(imageUrl) {
+        const markerElement = document.createElement('div');
+        markerElement.style.backgroundImage = `url(${imageUrl})`;
+        markerElement.style.backgroundSize = 'contain';
+        markerElement.style.width = '40px'; // Adjust the size of the marker as needed
+        markerElement.style.height = '40px';
+        return markerElement;
+      }
+      const marker = new maplibregl.Marker({
+        element: createCustomMarker('assets/picto-formes-tournesol_39.png')
+      })
       .setLngLat([e.long, e.lat])
       .addTo(map);
       
@@ -238,7 +251,9 @@ async function main() {
       `
     })
 
-    openPanel(70)
+    if (isMobile()) {
+      panel.style.height = `${80}%`;
+    }
   } 
   
   function hideFiche() {
@@ -250,7 +265,9 @@ async function main() {
     
     fitGeoJsonBounds(map, 'data/traces.geojson');
 
-    openPanel(20)
+    if (isMobile()) {
+      panel.style.height = `${20}%`;
+    }
   }
 }
 
