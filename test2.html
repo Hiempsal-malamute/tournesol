@@ -28,7 +28,7 @@
       background: #fff;
       box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
       z-index: 1000;
-      transition: height 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.3s ease, left 0.3s ease;
+      transition: height 0.2s cubic-bezier(0.25, 0.8, 0.5, 1.2), width 0.3s ease, left 0.3s ease;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -74,6 +74,11 @@
       padding: 10px;
       overflow-y: auto;
       flex-grow: 1;
+      pointer-events: none; /* Disable scroll interaction by default */
+    }
+
+    .panel-content.scrollable {
+      pointer-events: auto; /* Enable scroll interaction when needed */
     }
   </style>
 </head>
@@ -85,7 +90,7 @@
         <div class="mobile-bar"></div>
         <h3>Swipeable Panel</h3>
       </div>
-      <div class="panel-content">
+      <div class="panel-content" id="panel-content">
         <p>Welcome to the swipeable panel demo! Use your finger to swipe up or down.</p>
         <p>This panel adapts its layout based on your device.</p>
         <p>Additional content to test scrolling behavior.</p>
@@ -99,11 +104,12 @@
   </div>
   <script>
     const panel = document.getElementById('panel');
-    const panelHeader = document.getElementById('panel-header');
+    const panelContent = document.getElementById('panel-content');
     let startY = 0;
     let currentHeight = 20; // Start height in percentage
     let velocity = 0;
     let animationFrame;
+    let isScrollingEnabled = false;
 
     function isMobile() {
       return window.innerWidth < 768;
@@ -122,28 +128,44 @@
         panel.style.width = '300px';
         panel.style.height = '100%';
         panel.style.left = '0';
+        panelContent.classList.add('scrollable'); // Enable scroll on desktop
       }
     }
 
-    panelHeader.addEventListener('touchstart', (e) => {
+    panel.addEventListener('touchstart', (e) => {
       if (!isMobile()) return;
       startY = e.touches[0].clientY;
       cancelAnimationFrame(animationFrame);
       velocity = 0;
     });
 
-    panelHeader.addEventListener('touchmove', (e) => {
-      if (!isMobile()) return;
+    panel.addEventListener('touchmove', (e) => {
+      if (!isMobile() || isScrollingEnabled) return;
       const deltaY = startY - e.touches[0].clientY;
       currentHeight = Math.min(90, Math.max(20, currentHeight + (deltaY / window.innerHeight) * 100));
       panel.style.height = `${currentHeight}%`;
       velocity = deltaY / (e.timeStamp || 1);
       startY = e.touches[0].clientY;
+      panelContent.classList.remove('scrollable'); // Disable scroll during swipe
     });
 
-    panelHeader.addEventListener('touchend', () => {
+    panel.addEventListener('touchend', () => {
       if (!isMobile()) return;
-      const snapTo = velocity > 0 ? Math.ceil(currentHeight / 10) * 10 : Math.floor(currentHeight / 10) * 10;
+      if (currentHeight === 90) {
+        isScrollingEnabled = true;
+        panelContent.classList.add('scrollable');
+      } else {
+        isScrollingEnabled = false;
+        panelContent.classList.remove('scrollable');
+      }
+
+      let snapTo;
+      if (velocity > 0) {
+        snapTo = Math.ceil(currentHeight / 10) * 10;
+      } else {
+        snapTo = Math.floor(currentHeight / 10) * 10;
+      }
+
       const animate = () => {
         currentHeight += (snapTo - currentHeight) * 0.2;
         panel.style.height = `${currentHeight}%`;
