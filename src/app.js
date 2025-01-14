@@ -232,6 +232,7 @@ async function main() {
   })
   
   function showFiche(id, data) {
+    ficheVille.innerHTML = ''
     listeVilles.style.display = 'none'
     ficheVille.style.display = 'block'
     backBtn.style.display = 'block'
