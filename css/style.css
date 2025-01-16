@@ -1,3 +1,8 @@
+:root{
+  --vert-clair:#00000;
+  --vert-foret:#0b4e44
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -73,7 +78,7 @@ body {
 }
 
 .panel-content {
-  padding: 10px;
+  padding: 10px 20px 30px 20px;
   overflow-y: auto;
   flex-grow: 1;
 }
@@ -102,4 +107,42 @@ body {
 
 .ville-option > * {
   pointer-events: none
+}
+
+.bilan-carbone {
+  display: flex;
+  background-color: #b1f3b6;
+  color: var(--vert-foret);
+  border: dashed 2px #0b4e44;
+  vertical-align: middle !important;
+  padding: 15px 10px 5px 15px;
+  border-radius: 10px;
+  flex-direction: column;
+  gap:5px
+}
+
+.bilan-carbone .title {
+  font-size: 1.35em;
+  font-weight: 600;
+}
+
+.bilan-carbone .mode {
+  display: flex; /* Add this to activate flexbox */
+  align-items: center; /* Vertically align items inside the .mode div */
+  flex-direction: row; 
+}
+
+.bilan-carbone .ph {
+  margin-left: -5px;
+  margin-right: 10px;
+  font-size:2.5em;
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  border: dashed 1px var(--vert-foret)
+}
+
+.ph-airplane-tilt {
+  color:darkred;
+  border: dotted 1px darkred 
 }

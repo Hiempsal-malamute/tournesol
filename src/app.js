@@ -231,7 +231,7 @@ async function main() {
     hideFiche()
   })
   
-  function showFiche(id, data) {
+  async function showFiche(id, data) {
     ficheVille.innerHTML = '';
     listeVilles.style.display = 'none';
     ficheVille.style.display = 'block';
@@ -251,17 +251,32 @@ async function main() {
       zoom: 9,
       offset: [0, paddingBottomMarker],
     });
-    
+
+    // ajout wikipedia image
+    const villeImageUrl = async (ville) => {
+      const imageUrl = await fetchWikiImage(ville)
+      ficheVille.innerHTML += `<img src="${imageUrl}" style="width:100%"/>`;
+    }
+    // villeImageUrl(filtered['ville'])
+
     ficheVille.innerHTML += `<h2>${filtered['ville']}</h2><span>${filtered['pays']}</span>`;
-    ficheVille.innerHTML += `<h4>Et ton bilan carbone alors ? è_é</h4>`;
     
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
       <div>
         <p>Depuis ${e['from']} :</p>
         <span><i>${e['commentaire']}</i></span>
-        <p><b>En avion : </b>${e['co2eq_avion']} :</p>
-        <p><b>En train : </b>${e['co2eq_train']} :</p>
+        <div class="bilan-carbone">
+          <span class="title">
+            Bilan carbone
+          </span>
+          <div class="mode">
+            <i class="ph ph-train-simple"></i><span>${e['co2eq_train']}</span>
+          </div>
+          <div class="mode">
+            <i class="ph ph-airplane-tilt"></i><span>${e['co2eq_avion']}</span>
+          </div>
+        </div>
       </div>
       `
     })
@@ -298,3 +313,24 @@ const url = new URL(window.location.href);
 const urlSearchParams = url.searchParams;
 
 main();
+
+const fetchWikiImage = async (pageTitle) => {
+  const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${pageTitle}&prop=pageimages&format=json&pithumbsize=500&origin=*`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const pages = data.query.pages;
+    const page = Object.values(pages)[0]; // Access the first page object
+    console.log(page)
+    const imageUrl = page.thumbnail?.source;
+
+    if (imageUrl) {
+      return imageUrl
+    } else {
+      console.error("No image found for this page.");
+    }
+  } catch (error) {
+    console.error("Error fetching image:", error);
+  }
+};
