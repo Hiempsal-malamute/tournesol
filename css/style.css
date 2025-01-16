@@ -1,6 +1,7 @@
 :root{
-  --vert-clair:#00000;
-  --vert-foret:#0b4e44
+  --vert-clair:#b1f3b6;
+  --vert-foret:#0b4e44;
+  --orange:rgb(244,102,27);
 }
 
 body {
@@ -21,7 +22,9 @@ body {
 
 .panel {
   position: fixed;
-  background: #fff;
+  background: var(--orange);
+  color:white;
+  /* background: #fff; */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: height 0.2s cubic-bezier(0.25, 0.8, 0.5, 1.2), width 0.3s ease, left 0.3s ease;
@@ -34,8 +37,8 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20%;
-  min-height: 20%;
+  height: 30%;
+  min-height: 30%;
   max-height: 90%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -53,14 +56,20 @@ body {
 .panel-header {
   text-align: center;
   padding: 10px;
-  /* background: #eee; */
   cursor: pointer;
   flex-shrink: 0;
+  font-weight: 600;
+}
+
+#intro-header {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  color: yellow
 }
 
 @media screen and (min-width: 768px){
   .panel-header {
-    text-align: left;
     cursor: auto;
   }
 
@@ -72,7 +81,8 @@ body {
 .mobile-bar {
   width: 40px;
   height: 5px;
-  background: #ccc;
+  /* background: #ccc; */
+  background: white;
   margin: 5px auto;
   border-radius: 5px;
 }
@@ -81,23 +91,50 @@ body {
   padding: 10px 20px 30px 20px;
   overflow-y: auto;
   flex-grow: 1;
+  gap: 10px;
 }
 
 /* options villes */
 .ville-option {
   cursor: pointer;
-  background-color: #b1f3b6;
-  color:#0b4e44;
-  border-radius: 20px;
-  padding-left: 5px;
+  background-color: var(--vert-foret);
+  color:var(--vert-clair);
+  border-radius: 10px;
+  padding: 15px;
+  /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); */
+  margin-bottom: 20px; 
+}
+
+.ville-option span {
+  font-weight: 600;
+  font-size: 1.2em;
+  /* text-transform: uppercase; */
 }
 
 #fiche-ville {
   display: none;
+  /* background: #ffffff; */
+  padding: 10px  20px 30px 10px;
+  border-radius: 10px;
+  color:var(--vert-foret);
+  background-color: var(--vert-foret);
+  color: white;
+}
+
+
+.ville-nom {
+  display: block;
+  margin-bottom: 20 px;
+  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 1.5em;
+  color:var(--vert-clair)
 }
 
 #back {
   display: none;
+  visibility: hidden;
 }
 
 .liste-ville{
@@ -111,7 +148,7 @@ body {
 
 .bilan-carbone {
   display: flex;
-  background-color: #b1f3b6;
+  background-color: var(--vert-clair);
   color: var(--vert-foret);
   border: dashed 2px #0b4e44;
   vertical-align: middle !important;
@@ -119,11 +156,6 @@ body {
   border-radius: 10px;
   flex-direction: column;
   gap:5px
-}
-
-.bilan-carbone .title {
-  font-size: 1.35em;
-  font-weight: 600;
 }
 
 .bilan-carbone .mode {

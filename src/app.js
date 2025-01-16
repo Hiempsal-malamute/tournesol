@@ -175,8 +175,7 @@ async function main() {
 
       listeVilles.innerHTML += `
         <div class="ville-option" id="${e['fid']}">
-          <h4>${e['ville']}</h4>
-          <span>${e['pays']}</span>
+          <span>${e['ville']}</span>
         </div>
       `
 
@@ -259,7 +258,12 @@ async function main() {
     }
     // villeImageUrl(filtered['ville'])
 
-    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2><span>${filtered['pays']}</span>`;
+    ficheVille.innerHTML += `
+    <div class="card-header">
+      <span class="ville-nom">${filtered['ville']}</span>
+      <span>${filtered['pays']}</span>
+    </div>
+    `;
     
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
