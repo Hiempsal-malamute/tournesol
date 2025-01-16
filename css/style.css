@@ -4,9 +4,22 @@
   --orange:rgb(244,102,27);
 }
 
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('font/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Poids de 100 à 900 */
+  font-stretch: 50% 200%; /* Largeur de 50% à 200% */
+}
+
+
+p, span {
+  font-family: 'Lexend Deca', sans-serif;
+  font-variation-settings: "wght" 500, "wdth" 100; /* Poids léger et largeur plus large */
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   overflow: hidden;
 }
 
@@ -106,7 +119,8 @@ body {
 }
 
 .ville-option span {
-  font-weight: 600;
+  font-weight: 600 !important;
+  font-weight: bolder;
   font-size: 1.2em;
   /* text-transform: uppercase; */
 }
