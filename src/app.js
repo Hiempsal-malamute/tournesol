@@ -208,7 +208,7 @@ async function main() {
       ville = elem.target
       if(ville && ville.className == "ville-option") {
         console.log(i)
-        urlSearchParams.set('id_ville', ville.id)
+        urlSearchParams.set('id_ville', ville.id);
         window.history.pushState({}, '', url);
         // showFiche(ville.id, data)
       }
@@ -232,12 +232,12 @@ async function main() {
   })
   
   function showFiche(id, data) {
-    ficheVille.innerHTML = ''
-    listeVilles.style.display = 'none'
-    ficheVille.style.display = 'block'
-    backBtn.style.display = 'block'
+    ficheVille.innerHTML = '';
+    listeVilles.style.display = 'none';
+    ficheVille.style.display = 'block';
+    backBtn.style.display = 'block';
     if(isMobile()) {
-      intro.style.display = 'none'
+      intro.style.display = 'none';
     }
 
   
@@ -252,8 +252,8 @@ async function main() {
       offset: [0, paddingBottomMarker],
     });
     
-    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2><span>${filtered['pays']}</span>`
-    ficheVille.innerHTML += `<h4>Et ton bilan carbone alors ? è_é</h4>`
+    ficheVille.innerHTML += `<h2>${filtered['ville']}</h2><span>${filtered['pays']}</span>`;
+    ficheVille.innerHTML += `<h4>Et ton bilan carbone alors ? è_é</h4>`;
     
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
@@ -272,11 +272,11 @@ async function main() {
   } 
   
   function hideFiche() {
-    listeVilles.style.display = 'block'
-    ficheVille.style.display = 'none'
-    backBtn.style.display = 'none'
+    listeVilles.style.display = 'block';
+    ficheVille.style.display = 'none';
+    backBtn.style.display = 'none';
     if(isMobile()) {
-      intro.style.display = 'block'
+      intro.style.display = 'block';
     }
 
     ficheVille.innerHTML = ''
@@ -289,12 +289,12 @@ async function main() {
   }
 }
 
-const listeVilles = document.getElementById('liste-ville')
-const ficheVille = document.getElementById('fiche-ville')
-const backBtn = document.getElementById('back')
-const intro = document.getElementById('intro')
+const listeVilles = document.getElementById('liste-ville');
+const ficheVille = document.getElementById('fiche-ville');
+const backBtn = document.getElementById('back');
+const intro = document.getElementById('intro');
 
 const url = new URL(window.location.href);
 const urlSearchParams = url.searchParams;
 
-main()
+main();
