@@ -284,7 +284,7 @@ async function main() {
       ficheVille.innerHTML += `
       <div>
         <p>Depuis ${e['from']} :</p>
-        <span><i>${e['commentaire']}</i></span>
+        <span><i>${e['instructions']}</i></span>
         <div class="bilan-carbone">
           <span class="title">
             Bilan carbone

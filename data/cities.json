@@ -9,21 +9,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Train de nuit direct",
+        "instructions":"Train de nuit direct",
         "co2eq_avion":"430 kg (21,5% des objectifs 2T)",
         "co2eq_train":"5,3 kg soit 81 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"Train de nuit direct",
+        "instructions":"Train de nuit direct",
         "co2eq_avion":"275 kg (13,75% des objectifs 2T)",
         "co2eq_train":"3,12 kg soit 88 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Paris",
-        "commentaire":"En passant par Épinal",
+        "instructions":"En passant par Épinal",
         "co2eq_avion":"428 kg (21,4% des objectifs 2T)",
         "co2eq_train":"8,92 kg soit 48 fois moins que l’avion",
         "co2eq_bus":0
@@ -40,7 +40,7 @@
     "origins":[
       {
         "from":"Barcelone",
-        "commentaire":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
+        "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -57,21 +57,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
         "co2eq_avion":"545 kg (27,25% des objectifs 2T)",
         "co2eq_train":"12,3 kg soit 44 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
         "co2eq_avion":"521 kg (26,05% des objectifs 2T)",
         "co2eq_train":"10,6 kg soit 49 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
         "co2eq_avion":"613 kg (30,65% des objectifs 2T)",
         "co2eq_train":"12,9 kg soit 48 fois moins que l’avion",
         "co2eq_bus":0
@@ -88,7 +88,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -105,7 +105,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -122,7 +122,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -139,7 +139,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -156,7 +156,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -173,7 +173,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -190,7 +190,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -207,7 +207,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -224,14 +224,14 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"354 kg (18,2% des objectifs 2T)",
         "co2eq_train":"4,85 kg soit 73 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"298 kg (14,9% des objectifs 2T)",
         "co2eq_train":"6,13 kg soit 49 fois moins que l’avion",
         "co2eq_bus":"43 kg soit 7 fois moins que l’avion"
@@ -248,21 +248,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Depuis Paris train de nuit Le train part à 19h58 de gare de l'Est le mardi, vendredi et dimanche, et arrive à Vienna Hbf à 10h13",
+        "instructions":"Depuis Paris train de nuit Le train part à 19h58 de gare de l'Est le mardi, vendredi et dimanche, et arrive à Vienna Hbf à 10h13",
         "co2eq_avion":"388 kg (19,4% des objectifs 2T)",
         "co2eq_train":"8,11 kg soit 48 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"474 kg (23,7% des objectifs 2T)",
         "co2eq_train":"8,2 kg soit 58 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"Depuis l'Est depuis Mulhouse une correspondance via Zurich et possibilité de faire Zurich-Wien de nuit ou Strasbourg avec une correspondance à Stuttgart départ 19h52 et arrivée 6h du matin",
+        "instructions":"Depuis l'Est depuis Mulhouse une correspondance via Zurich et possibilité de faire Zurich-Wien de nuit ou Strasbourg avec une correspondance à Stuttgart départ 19h52 et arrivée 6h du matin",
         "co2eq_avion":"380 kg (19% des objectifs 2T)",
         "co2eq_train":"5,93 kg soit 64 fois moins que l’avion",
         "co2eq_bus":0
@@ -279,21 +279,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
         "co2eq_avion":": 409 kg (20,45% des objectifs 2T)",
         "co2eq_train":": 8,8 kg soit 46 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
         "co2eq_avion":"502 kg (25,1% des objectifs 2T)",
         "co2eq_train":"11,2 kg soit 45 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
         "co2eq_avion":"410 kg (20,5% des objectifs 2T)",
         "co2eq_train":"7,39 kg soit 55 fois moins que l’avion",
         "co2eq_bus":0
@@ -310,21 +310,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
         "co2eq_avion":"467 kg (23,35% des objectifs 2T)",
         "co2eq_train":"9 kg soit 52 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
         "co2eq_avion":"413 kg (20,65% des objectifs 2T)",
         "co2eq_train":"9,02 kg soit 46 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
         "co2eq_avion":"487 kg (24,35% des objectifs 2T)",
         "co2eq_train":"7,57 kg soit 64 fois moins que l’avion",
         "co2eq_bus":0
@@ -341,21 +341,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Paris - Stuttgart 3h15 TGV ; Stuttgart - Zagreb 10h de train de nuit ; Zagreb - Belgrad 5h de bus",
+        "instructions":"Paris - Stuttgart 3h15 TGV ; Stuttgart - Zagreb 10h de train de nuit ; Zagreb - Belgrad 5h de bus",
         "co2eq_avion":"42 kg (27,1 % des objectifs 2T)",
         "co2eq_train":"11,7 kg soit 46 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
         "co2eq_avion":"459 kg (22,95 % des objectifs 2T)",
         "co2eq_train":"10.8 kg soit 43 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
         "co2eq_avion":"425 kg (21,25% des objectifs 2T)",
         "co2eq_train":"10,7 kg soit 40 fois moins que l’avion",
         "co2eq_bus":0
@@ -372,21 +372,21 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
         "co2eq_avion":"702 kg (35,1% des objectifs 2T)",
         "co2eq_train":"14,1 kg soit 50 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
         "co2eq_avion":"627 kg (31,35 % des objectifs 2T)",
         "co2eq_train":"13,4 kg soit 47 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Épinal",
-        "commentaire":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
         "co2eq_avion":"586 kg (29,3 % des objectifs 2T)",
         "co2eq_train":"13,5 kg soit 43 fois moins que l’avion",
         "co2eq_bus":0
@@ -403,7 +403,7 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Depuis Bucarest. Ce train (Bosphorus Express) ne circule qu'entre avril et début octobre et se réserve directement en gare de Bucarest ou Istanbul. Le départ à lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix environ 35 €.",
+        "instructions":"Depuis Bucarest. Ce train (Bosphorus Express) ne circule qu'entre avril et début octobre et se réserve directement en gare de Bucarest ou Istanbul. Le départ à lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix environ 35 €.",
         "co2eq_avion":"431 kg (21,55% des objectifs 2T)",
         "co2eq_train":"15,8 kg soit 27 fois moins que l’avion",
         "co2eq_bus":0
@@ -420,7 +420,7 @@
         "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
@@ -437,7 +437,7 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Paris - Milan 5h puis Milan - Bru train de nuit 10h et ensuite ferry de nuit jusqu'à Durres (30€). Possible de rejoindre Tirana en bus 45 minutes.",
+        "instructions":"Paris - Milan 5h puis Milan - Bru train de nuit 10h et ensuite ferry de nuit jusqu'à Durres (30€). Possible de rejoindre Tirana en bus 45 minutes.",
         "co2eq_avion":"592 kg (29,6% des objectifs 2T)",
         "co2eq_train":"11,7 kg soit 51 fois moins que l’avion",
         "co2eq_bus":0
@@ -454,14 +454,14 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
         "co2eq_avion":"463 kg (23,15% des objectifs 2T)",
         "co2eq_train":"11 kg soit 42 fois moins que l’avion",
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "commentaire":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
         "co2eq_avion":"492 kg (24,6% des objectifs 2T)",
         "co2eq_train":"8,77 kg soit 56 fois moins que l’avion",
         "co2eq_bus":0
@@ -478,7 +478,7 @@
     "origins":[
       {
         "from":"Paris",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"499 kg (24,95% des objectifs 2T)",
         "co2eq_train":"8,01 kg soit 62 fois moins que l’avion",
         "co2eq_bus":0
@@ -495,7 +495,7 @@
     "origins":[
       {
         "from":"",
-        "commentaire":"",
+        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
