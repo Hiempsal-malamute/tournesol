@@ -206,7 +206,6 @@ async function main() {
       i++;
       ville = elem.target
       if(ville && ville.className == "ville-option") {
-        console.log(i)
         urlSearchParams.set('id_ville', ville.id);
         window.history.pushState({}, '', url);
         // showFiche(ville.id, data)
@@ -214,17 +213,33 @@ async function main() {
     });
   })
 
-  window.navigation.addEventListener('navigate', (e) => {
-    id = urlSearchParams.get('id_ville')
-    
-    if(e.navigationType == 'traverse') {
-      hideFiche()
-    }
+  
 
-    if(e.navigationType == 'push') {
-      showFiche(id, data)
-    }
-  })
+  if(window.navigation) {
+    window.navigation.addEventListener('navigate', (e) => {
+      id = urlSearchParams.get('id_ville')
+      
+      if(e.navigationType == 'traverse') {
+        hideFiche()
+      }
+  
+      if(e.navigationType == 'push') {
+        showFiche(id, data)
+      }
+    })
+  } else {
+    let currentPage = location.href
+    setInterval(() => {
+      if (currentPage != location.href) {
+        // page has changed, set new page as 'current'
+        currentPage = new URL(location.href);
+        id = currentPage.searchParams.get("id_ville")
+        if(id) { showFiche(id, data) } else { hideFiche() }
+      }
+    }, 500);    
+  }
+
+
   
   backBtn.addEventListener('click', () => {
     hideFiche()
