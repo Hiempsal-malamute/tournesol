@@ -1,0 +1,621 @@
+[
+  {
+    "fid": 2,
+    "ville": "Barcelone",
+    "pays": "Espagne",
+    "lat": 41.3828939,
+    "long": 2.1774322,
+    "city": "Barcelona",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Train de nuit direct",
+        "options":[
+          {
+            "duration":"6h 30, 50",
+            "price":"70 €",
+            "instructions":"Train direct TGV InOui. On vous conseille de le réserver à l’avance",
+            "velo_transport":"autorisé si démonté"
+          },
+          {
+            "duration":"Nuit + 2h",
+            "price":"70-80 €",
+            "instructions":"Alternative afin de ne pas démonter son vélo : TGV jusqu’à Perpignan (train de nuit ou de jour) en réservant un emplacement vélo non démonté puis prendre un Flixbus avec réservation pour vélo non-démonté.",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":430,
+        "co2eq_train":5.3,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Train de nuit direct",
+        "options":[
+          {
+            "duration":"5h40",
+            "price":"50",
+            "instructions":"Train direct Renfe. On vous conseille de réserver à l’avance",
+            "velo_transport":"autorisé si démonté"
+          },
+          {
+            "duration":"6h30",
+            "price":"60-70 €",
+            "instructions":"Afin de ne pas démonter son vélo, il est possible de prendre un TGV jusqu’à Montpellier (2h) en réservant un espace vélo non démonté puis en prenant un Flixbus avec réservation vélo non démonté (4h30).",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":275,
+        "co2eq_train":3.12,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"En passant par Épinal",
+        "options":[
+          {
+            "duration":"",
+            "price":"50",
+            "instructions":"Prendre un TGV ou TER jusqu’à Paris puis voir les options proposées depuis Paris et Lyon.",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
+        "co2eq_avion":428,
+        "co2eq_train":8.92,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 3,
+    "ville": "Séville",
+    "pays": "Espagne",
+    "lat": 37.3886303,
+    "long": -5.9953403,
+    "city": "Sevilla",
+    "origins":[
+      {
+        "from":"Barcelone",
+        "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
+        "options":[
+          {
+            "duration":"6h",
+            "price":"50",
+            "instructions":"Voir comment se rendre à Barcelone (les infos sont disponibles sur la carte en cliquant sur la ville de Barcelone), puis train jusqu’à Séville, Renfe AVE ou Iryo, on vous conseille de vous y prendre en avance pour avoir les meilleurs prix.",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 4,
+    "ville": "Lisbonne",
+    "pays": "Portugal",
+    "lat": 38.7077507,
+    "long": -9.1365919,
+    "city": "Lisboa",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "options":[
+          {
+            "duration":"22h",
+            "price":"50-70",
+            "instructions":"Flixbus direct",
+            "velo_transport":"interdit"
+          }
+        ],
+        "co2eq_avion":545,
+        "co2eq_train":12.3,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "options":[
+          {
+            "duration":"2h30 + nuit",
+            "price":"30-50",
+            "instructions":"Voir comment se rendre à Barcelone (les infos sont disponibles sur la carte en cliquant sur la ville de Barcelone). Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
+        "co2eq_avion":521,
+        "co2eq_train":10.6,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
+        "co2eq_avion":613,
+        "co2eq_train":12.9,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 5,
+    "ville": "Bordeaux",
+    "pays": "France",
+    "lat": 44.841225,
+    "long": -0.5800364,
+    "city": "Bordeaux",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"4h45",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TGV direct depuis Paris, possibilité de réserver un emplacement vélo",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+        }
+      ]
+    },
+    {
+      "fid": 6,
+      "ville": "Cahors",
+      "pays": "France",
+      "lat": 44.4495,
+      "long": 1.4364999,
+      "city": "Cahors",
+      "origins":[
+        {
+          "from":"Paris",
+          "instructions":"",
+          "options":[
+            {
+              "duration":"5h30 de jour ou 7h de nuit",
+              "price":"Variable, voir SNCF Connect",
+              "instructions":"Cahors TGV ou Intercités direct depuis Paris, possibilité de réserver un emplacement vélo non-démonté.",
+              "velo_transport":"autorisé"
+            }
+          ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 7,
+    "ville": "Lyon",
+    "pays": "France",
+    "lat": 45.7578137,
+    "long": 4.8320114,
+    "city": "Lyon",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"2h",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TGV direct depuis Paris, possibilité de réserver un emplacement vélo non-démonté.",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 8,
+    "ville": "Dijon",
+    "pays": "France",
+    "lat": 47.3215806,
+    "long": 5.0414701,
+    "city": "Dijon",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"2h45",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TER direct Paris Dijon sans réservation obligatoire pour un vélo non démonté.",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 9,
+    "ville": "Besançon",
+    "pays": "France",
+    "lat": 47.2380222,
+    "long": 6.0243622,
+    "city": "Besançon",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"3h15",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TER Paris-Dijon, puis TER jusqu’à Besançon, vélos non démontés acceptés, sans réservation.",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 10,
+    "ville": "Belfort",
+    "pays": "France",
+    "lat": 47.6379599,
+    "long": 6.8628942,
+    "city": "Belfort",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"3h",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TER direct depuis Paris, sans réservation obligatoire pour un vélo non démonté.",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 11,
+    "ville": "Bâle",
+    "pays": "Suisse",
+    "lat": 47.5581077,
+    "long": 7.5878261,
+    "city": "Basel",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "options":[
+          {
+            "duration":"3h",
+            "price":"70",
+            "instructions":"TGV direct depuis Paris jusqu’à Bâle avec vélo démonté dans une housse",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 12,
+    "ville": "Constance",
+    "pays": "Allemagne",
+    "lat": 47.659216,
+    "long": 9.1750718,
+    "city": "Konstanz",
+        "origins":[
+      {
+        "from":"",
+        "instructions":"",
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 13,
+    "ville": "Munich",
+    "pays": "Allemagne",
+    "lat": 48.1371079,
+    "long": 11.5753822,
+    "city": "München",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "co2eq_avion":354,
+        "co2eq_train":4.85,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"",
+        "co2eq_avion":298,
+        "co2eq_train":6.13,
+        "co2eq_bus":43 
+      }
+    ]
+  },
+  {
+    "fid": 14,
+    "ville": "Wien",
+    "pays": "Autriche",
+    "lat": 48.2083537,
+    "long": 16.3725042,
+    "city": "Wien",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Depuis Paris train de nuit Le train part à 19h58 de gare de l'Est le mardi, vendredi et dimanche, et arrive à Vienna Hbf à 10h13",
+        "co2eq_avion":388,
+        "co2eq_train":8.11,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"",
+        "co2eq_avion":474,
+        "co2eq_train":8.2,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"Depuis l'Est depuis Mulhouse une correspondance via Zurich et possibilité de faire Zurich-Wien de nuit ou Strasbourg avec une correspondance à Stuttgart départ 19h52 et arrivée 6h du matin",
+        "co2eq_avion":380,
+        "co2eq_train":5.93,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 15,
+    "ville": "Bratislava",
+    "pays": "Slovaquie",
+    "lat": 48.1516988,
+    "long": 17.1093063,
+    "city": "Bratislava",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "co2eq_avion":409,
+        "co2eq_train":8.8,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "co2eq_avion":502,
+        "co2eq_train":11.2,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "co2eq_avion":410,
+        "co2eq_train":7.39,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 16,
+    "ville": "Budapest",
+    "pays": "Hongrie",
+    "lat": 47.48138955,
+    "long": 19.1460941269125,
+    "city": "Budapest",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "co2eq_avion":467,
+        "co2eq_train":9,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "co2eq_avion":413,
+        "co2eq_train":9.02,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "co2eq_avion":487,
+        "co2eq_train":7.57,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 17,
+    "ville": "Belgrade",
+    "pays": "Serbie",
+    "lat": 44.8178131,
+    "long": 20.4568974,
+    "city": "Београд",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Paris - Stuttgart 3h15 TGV ; Stuttgart - Zagreb 10h de train de nuit ; Zagreb - Belgrad 5h de bus",
+        "co2eq_avion":42,
+        "co2eq_train":11.7,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "co2eq_avion":459,
+        "co2eq_train":10.8,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "co2eq_avion":425,
+        "co2eq_train":10.7,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 18,
+    "ville": "Bucarest",
+    "pays": "Roumanie",
+    "lat": 44.4361414,
+    "long": 26.1027202,
+    "city": "București",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "co2eq_avion":702,
+        "co2eq_train":14.1,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "co2eq_avion":627,
+        "co2eq_train":13.4,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Épinal",
+        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "co2eq_avion":586,
+        "co2eq_train":13.5,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 19,
+    "ville": "Istanbul",
+    "pays": "Turquie",
+    "lat": 41.0766019,
+    "long": 29.052495,
+    "city": "İstanbul",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Depuis Bucarest. Ce train (Bosphorus Express) ne circule qu'entre avril et début octobre et se réserve directement en gare de Bucarest ou Istanbul. Le départ à lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix environ 35 €.",
+        "co2eq_avion":431,
+        "co2eq_train":15.8,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 20,
+    "ville": "Athènes",
+    "pays": "Grèce",
+    "lat": 37.9755648,
+    "long": 23.7348324,
+    "city": "Αθήνα",
+        "origins":[
+      {
+        "from":"",
+        "instructions":"",
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 21,
+    "ville": "Durres",
+    "pays": "Albanie",
+    "lat": 41.313255,
+    "long": 19.4462348,
+    "city": "Bashkia Durrës",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Paris - Milan 5h puis Milan - Bru train de nuit 10h et ensuite ferry de nuit jusqu'à Durres (30€). Possible de rejoindre Tirana en bus 45 minutes.",
+        "co2eq_avion":592,
+        "co2eq_train":11.7,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 22,
+    "ville": "Split",
+    "pays": "Croatie",
+    "lat": 43.5116383,
+    "long": 16.4399659,
+    "city": "Split",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "co2eq_avion":463,
+        "co2eq_train":11,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "co2eq_avion":492,
+        "co2eq_train":8.77,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 23,
+    "ville": "Ljubljana",
+    "pays": "Slovénie",
+    "lat": 46.0500268,
+    "long": 14.5069289,
+    "city": "Ljubljana",
+    "origins":[
+      {
+        "from":"Paris",
+        "instructions":"",
+        "co2eq_avion":499,
+        "co2eq_train":8.01,
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 24,
+    "ville": "Grenoble",
+    "pays": "France",
+    "lat": 45.1875602,
+    "long": 5.7357819,
+    "city": "Grenoble",
+    "origins":[
+      {
+        "from":"",
+        "instructions":"",
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  }
+]
