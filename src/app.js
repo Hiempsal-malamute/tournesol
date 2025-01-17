@@ -284,6 +284,7 @@ async function main() {
       ficheVille.innerHTML += `
       <div>
         <p>Depuis ${e['from']} :</p>
+        <hr>
         <span><i>${e['instructions']}</i></span>
         <div class="bilan-carbone">
           <span class="title">
@@ -353,3 +354,8 @@ const fetchWikiImage = async (pageTitle) => {
     console.error("Error fetching image:", error);
   }
 };
+
+// "interdit"
+// "autorisé"
+// "autorisé si démonté"
+// "manque d'information (mais souvent ça passe démonté sous housse)
