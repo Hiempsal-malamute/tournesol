@@ -386,7 +386,7 @@ function getIconVelo(e) {
     case "autorisé si démonté":
       return path+ 'autorise_si_demonte' + '.svg'
     case "manque d'information":
-      return path+ 'manque_information' + '.svg'  
+      return path+ 'manque_info' + '.svg'  
   }
   
 }
