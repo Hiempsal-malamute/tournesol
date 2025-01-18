@@ -14,7 +14,8 @@
 
 p, span {
   font-family: 'Lexend Deca', sans-serif;
-  font-variation-settings: "wght" 500, "wdth" 100; /* Poids léger et largeur plus large */
+  /* Poids léger et largeur plus large */
+  /* font-variation-settings: "wght" 350, "wdth" 100; */
 }
 
 body {
@@ -165,11 +166,23 @@ body {
   pointer-events: none
 }
 
+.tag-option {
+  font-weight:bolder;
+}
+
+.option-details:not(:last-child) {
+  border-bottom: dashed 1px var(--vert-clair);
+}
+
+.picto-velo {
+  width: 50px;
+}
+
 .bilan-carbone {
   display: flex;
   background-color: var(--vert-clair);
   color: var(--vert-foret);
-  border: dashed 2px #0b4e44;
+  /* border: dashed 2px #0b4e44; */
   vertical-align: middle !important;
   padding: 15px 10px 5px 15px;
   border-radius: 10px;
@@ -186,11 +199,15 @@ body {
 .bilan-carbone .ph {
   margin-left: -5px;
   margin-right: 10px;
-  font-size:2.5em;
+  font-size:2em;
   background: #fff;
   border-radius: 50px;
   padding: 5px;
   border: dashed 1px var(--vert-foret)
+}
+
+.co2-val {
+  font-size: 1em;
 }
 
 .ph-airplane-tilt {

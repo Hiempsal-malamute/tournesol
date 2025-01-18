@@ -167,7 +167,7 @@ async function main() {
   fitGeoJsonBounds(map, 'data/traces.geojson');
 
   let data;
-  fetch("data/cities.json")
+  fetch("data/cities2.json")
   .then(res => res.json())
   .then(res => {
     data = res
@@ -277,24 +277,45 @@ async function main() {
     <div class="card-header">
       <span class="ville-nom">${filtered['ville']}</span>
       <span>${filtered['pays']}</span>
+      <hr>
     </div>
     `;
     
     filtered['origins'].forEach(e => {
       ficheVille.innerHTML += `
-      <div>
-        <p>Depuis ${e['from']} :</p>
-        <hr>
-        <span><i>${e['instructions']}</i></span>
+      <div style="font-size:1.25em">
+        <p><i>Depuis ${e['from']}</i></p>
+      </div>
+      `
+      // ajout itinéraires et détails
+      e['options'].forEach(option => {
+        ficheVille.innerHTML += `
+        <div class="option-details">
+          <p><img class="picto-velo" src="${getIconVelo(option['velo_transport'])}" title="${option['velo_transport']}"/>
+          ${option['instructions']}</p>
+          <p><span class="tag-option">Durée :</span> ${option['duration']}</p>
+          <p><span class="tag-option">Transport de vélo : </span>${option['velo_transport']}</p>
+          <p><span class="tag-option">Prix € :</span> ${option['price']}</p>
+        </div>
+        `
+      })
+      
+      avion_fois_moins = Math.round(e['co2eq_avion'] / e['co2eq_train'])
+
+      // ajout bilan carbone
+      ficheVille.innerHTML += `
         <div class="bilan-carbone">
           <span class="title">
-            Bilan carbone
+            Bilan carbone depuis ${e['from']}
           </span>
           <div class="mode">
-            <i class="ph ph-train-simple"></i><span>${e['co2eq_train']}</span>
+            <i class="ph ph-train-simple">
+            </i><span>${e['co2eq_train']} kg CO₂</span>
           </div>
+          contre
           <div class="mode">
-            <i class="ph ph-airplane-tilt"></i><span>${e['co2eq_avion']}</span>
+            <i class="ph ph-airplane-tilt"></i>
+            <span>${e['co2eq_avion']} kg CO₂ (soit <b>${avion_fois_moins}</b> fois plus que le train)</span>
           </div>
         </div>
       </div>
@@ -354,6 +375,21 @@ const fetchWikiImage = async (pageTitle) => {
     console.error("Error fetching image:", error);
   }
 };
+
+function getIconVelo(e) {
+  let path = 'assets/picto_velo/'
+  switch (e) {
+    case "interdit":
+      return path+ 'interdit' + '.svg'
+    case "autorisé":
+      return path+ 'autorise' + '.svg'
+    case "autorisé si démonté":
+      return path+ 'autorise_si_demonte' + '.svg'
+    case "manque d'information":
+      return path+ 'manque_information' + '.svg'  
+  }
+  
+}
 
 // "interdit"
 // "autorisé"

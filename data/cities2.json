@@ -148,7 +148,7 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"4h45",
@@ -173,7 +173,7 @@
       "origins":[
         {
           "from":"Paris",
-          "instructions":"",
+          
           "options":[
             {
               "duration":"5h30 de jour ou 7h de nuit",
@@ -198,7 +198,7 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"2h",
@@ -223,7 +223,7 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"2h45",
@@ -248,7 +248,7 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"3h15",
@@ -273,7 +273,7 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"3h",
@@ -298,34 +298,23 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
         "options":[
           {
             "duration":"3h",
             "price":"70",
             "instructions":"TGV direct depuis Paris jusqu’à Bâle avec vélo démonté dans une housse",
             "velo_transport":"autorisé si démonté"
+          },
+          {
+            "duration":"3h 15",
+            "price":"70",
+            "instructions":"TGV Paris-Strasbourg avec réservation vélo non démonté obligatoire puis TER Strasbourg-Basel sans réservation obligatoire.",
+            "velo_transport":"autorisé"
           }
         ],
-        "co2eq_avion":"",
-        "co2eq_train":"",
-        "co2eq_bus":0
-      }
-    ]
-  },
-  {
-    "fid": 12,
-    "ville": "Constance",
-    "pays": "Allemagne",
-    "lat": 47.659216,
-    "long": 9.1750718,
-    "city": "Konstanz",
-        "origins":[
-      {
-        "from":"",
-        "instructions":"",
-        "co2eq_avion":"",
-        "co2eq_train":"",
+        "co2eq_avion":214,
+        "co2eq_train":3.47,
         "co2eq_bus":0
       }
     ]
@@ -340,14 +329,35 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"",
+        
+        "options":[
+          {
+            "duration":"5h30",
+            "price":"60",
+            "instructions":"Prix stable en s'y prenant à l'avance ; TGV Inoui direct",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
         "co2eq_avion":354,
         "co2eq_train":4.85,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"",
+        "options":[
+          {
+            "duration":"8h",
+            "price":"120",
+            "instructions":"TGV Inoui jusqu’à Strasbourg (4h, 70€) puis TGV Inoui Strasbourg - Munich (4h - 50€).",
+            "velo_transport":"autorisé si démonté"
+          },
+          {
+            "duration":"12h30",
+            "price":"30",
+            "instructions":"Bus de nuit avec Flixbus, penser à réserver un emplacement vélo non démonté).",
+            "velo_transport":"autorisé"
+          }
+        ],
         "co2eq_avion":298,
         "co2eq_train":6.13,
         "co2eq_bus":43 
@@ -356,7 +366,7 @@
   },
   {
     "fid": 14,
-    "ville": "Wien",
+    "ville": "Vienne",
     "pays": "Autriche",
     "lat": 48.2083537,
     "long": 16.3725042,
@@ -364,14 +374,40 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Depuis Paris train de nuit Le train part à 19h58 de gare de l'Est le mardi, vendredi et dimanche, et arrive à Vienna Hbf à 10h13",
+        "options":[
+          {
+            "duration":"Nuit",
+            "price":"30 - 50",
+            "instructions":"Le nightjet est un train de nuit qui fait l’aller-retour en direct, il est possible de passer la nuit dans un siège pour 30€ ou dans une couchette (cabines de 4 à 6) pour 50€. On ne peut pas réserver les billets sur SNCF Connect, il faut aller sur le site de nightjet directement.<br>Nb : Il existe des wagons en non-mixité réservés aux femmes.<br>Nb2 : A priori il n’est pas possible de prendre un vélo non démonté mais le site internet de la compagnie ne précise pas si les vélos démontés sous housse sont autorisés.",
+            "velo_transport":"manque d'information"
+          },
+          {
+            "duration":"18h",
+            "price":"60 - 70",
+            "instructions":"Flixbus direct, avec réservation de l’emplacement vélo non-démonté obligatoire.",
+            "velo_transport":"autorisé"
+          },
+          {
+            "duration":"4h + nuit",
+            "price":"105",
+            "instructions":"Paris - Zurich (4h - 50€ avec vélo démonté) puis Zurich - Vienne en train de nuit (11h30 - 55€ couchettes et places vélo non démonté réservables sur OBB).",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
         "co2eq_avion":388,
         "co2eq_train":8.11,
-        "co2eq_bus":0
+        "co2eq_bus":73.1
       },
       {
         "from":"Lyon",
-        "instructions":"",
+        "options":[
+          {
+            "duration":"3h + nuit",
+            "price":"110",
+            "instructions":"Prendre TGV jusqu’à Milan puis prendre un train de nuit jusqu’à Vienne, ce train de nuit part tous les jours à 21h26 de Milan, et arrive le lendemain matin à 8h52 à Vienne, parfait pour démarrer une visite de la ville.",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":474,
         "co2eq_train":8.2,
         "co2eq_bus":0
@@ -395,14 +431,28 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "options":[
+          {
+            "duration":"Nuit + 1h",
+            "price":"40 - 70",
+            "instructions":"Prendre train de nuit nightjet Paris-Vienne, il est possible de passer la nuit dans un siège pour 30€ ou dans une couchette (cabines de 4 à 6) pour 50€. On ne peut pas réserver les billets sur SNCF Connect, il faut aller sur le site de nightjet directement. Puis prendre un train direct Vienne -Bratislava (1h, 10-20 €).",
+            "velo_transport":"manque d'information"
+          }          
+        ],
         "co2eq_avion":409,
         "co2eq_train":8.8,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"Train de nuit jusqu'à Wien puis bus (1h) jusqu'à Bratislava",
+        "options":[
+          {
+            "duration":"4h45 + nuit",
+            "price":"40 - 70",
+            "instructions":"Prendre TGV jusqu’à Milan puis prendre un train de nuit jusqu’à Vienne, ce train de nuit part tous les jours à 21h26 de Milan, et arrive le lendemain matin à 8h52 à Vienne, parfait pour démarrer une visite de la ville. Enfin, prendre un train direct Vienne -Bratislava (1h, 10-20 €)",
+            "velo_transport":"manque d'information"
+          }          
+        ],
         "co2eq_avion":502,
         "co2eq_train":11.2,
         "co2eq_bus":0
@@ -426,14 +476,34 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "options":[
+          {
+            "duration":"4h + nuit",
+            "price":"80",
+            "instructions":"Paris-Zurich (TGV Lyria, 4h, 50€ en semaine, 80€ le week-end) puisZurich-Budapest, train de nuit qui part tous les jours (OBB, 13h minimum 30€, attention, le train du vendredi est plus cher).",
+            "velo_transport":"manque d'information"
+          },
+          {
+            "duration":"Nuit + 2h30",
+            "price":"45 - 70",
+            "instructions":"Prendre train de nuit nightjet Paris-Vienne, il est possible de passer la nuit dans un siège pour 30€ ou dans une couchette (cabines de 4 à 6) pour 50€. On ne peut pas réserver les billets sur SNCF Connect, il faut aller sur le site de nightjet directement. Puis train Vienne – Budapest avec Regiojet.",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":467,
         "co2eq_train":9,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "options":[
+          {
+            "duration":"5h + nuit",
+            "price":"115",
+            "instructions":"Lyon - Genève en TER (30€) puis Genève-Zurich en train régional (compagnie SBB, 45 Francs suisses soit env. 55€) puis Zurich Budapest en 13h, train de nuit qui part tous les jours (OBB, minimum 30€, attention, le train du vendredi est plus cher).",            
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":413,
         "co2eq_train":9.02,
         "co2eq_bus":0
@@ -457,14 +527,28 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Paris - Stuttgart 3h15 TGV ; Stuttgart - Zagreb 10h de train de nuit ; Zagreb - Belgrad 5h de bus",
+        "options":[
+          {
+            "duration":"5h + nuit",
+            "price":"125",
+            "instructions":"Paris – Stuttgart TGV (Deutsche Bahn, 3h15, 50€), puis train de nuit jusqu’à Zagreb (OBB, 10h, 55€). Enfin bus jusqu’à Belgrade (flixbus, 5h, 20€).",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":42,
         "co2eq_train":11.7,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"130 € ; Paris - Zurich en 4h puis Zurich - Budapest en 13h de train de nuit (ligne qui part tous les jours!)",
+        "options":[
+          {
+            "duration":"20h",
+            "price":"110",
+            "instructions":"Lyon – Milan (4h30 en TGV, sinon flixbus de 6h, 40€) puis Milan - Trieste (4h30 avec trenitalia, 30€) puis bus jusqu’à Zagreb (flixbus 16€, 4h) et enfin le fameux Zagreb – Belgrade (flixbus, 20€, 5h).",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":459,
         "co2eq_train":10.8,
         "co2eq_bus":0
@@ -488,16 +572,30 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "options":[
+          {
+            "duration":"2 nuits",
+            "price":"80 - 100",
+            "instructions":"Prendre le train de nuit nightjet Paris-Vienne, il est possible de passer la nuit dans un siège pour 30€ ou dans une couchette (cabines de 4 à 6) pour 50€. On ne peut pas réserver les billets sur SNCF Connect, il faut aller sur le site de nightjet directement. Puis, il y a un train de nuit Vienne- Bucarest pour 50€ que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). A priori ok pour vélos démontés mais info trouvée sur des forums.",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
         "co2eq_avion":702,
-        "co2eq_train":14.1,
+        "co2eq_train":10.8,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"Accessible depuis Vienne. Trajet à réserver directement sur le site de la compagnie de train roumaine. Départs de Vienne tous les soirs à 19h42 pour une arrivée à Bucarest le lendemain à 15h. Réservation de couchettes possible dans des wagons allant de une à 6 personnes.",
+        "options":[
+          {
+            "duration":"3h + 2 nuits",
+            "price":"80 - 100",
+            "instructions":"Prendre TGV jusqu’à Milan puis prendre un train de nuit jusqu’à Vienne. Puis, il y a un train de nuit Vienne- Bucarest pour 50€ que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). A priori ok pour vélos démontés mais info trouvée sur des forums.",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":627,
-        "co2eq_train":13.4,
+        "co2eq_train":14.7,
         "co2eq_bus":0
       },
       {
@@ -519,9 +617,30 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Depuis Bucarest. Ce train (Bosphorus Express) ne circule qu'entre avril et début octobre et se réserve directement en gare de Bucarest ou Istanbul. Le départ à lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix environ 35 €.",
+        "options":[
+          {
+            "duration":"3 nuits",
+            "price":"110 - 135",
+            "instructions":"Nightjet Paris-Vienne* (50€), puis train de nuit Vienne- Bucarest (50€) que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). Pour finir, le Bosphorus Express est un train de nuit qui ne circule qu'entre avril et début octobre (et par chance on y sera en septembre !) et se réserve directement en gare de Bucarest ou Istanbul. Le départ a lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix : 10€ à 35€ en fonction du nombre de personnes dans la cabine-couchette.",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":431,
         "co2eq_train":15.8,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "options":[
+          {
+            "duration":"3h + 3 nuits",
+            "price":"190 - 225",
+            "instructions":"Prendre TGV jusqu’à Milan puis prendre un train de nuit jusqu’à Vienne. Puis, il y a un train de nuit Vienne- Bucarest pour 50€ que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). A priori ok pour vélos démontés mais info trouvée sur des forums. Pour finir, le Bosphorus Express est un train de nuit qui ne circule qu'entre avril et début octobre (et par chance on y sera en septembre !) et se réserve directement en gare de Bucarest ou Istanbul. Le départ a lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix : 10€ à 35€ en fonction du nombre de personnes dans la cabine-couchette.",
+            "velo_transport":"manque d'information"
+          }
+        ],
+        "co2eq_avion":753,
+        "co2eq_train":14.4,
         "co2eq_bus":0
       }
     ]
@@ -533,12 +652,19 @@
     "lat": 37.9755648,
     "long": 23.7348324,
     "city": "Αθήνα",
-        "origins":[
+    "origins":[
       {
-        "from":"",
-        "instructions":"",
-        "co2eq_avion":"",
-        "co2eq_train":"",
+        "from":"Paris",
+        "options":[
+          {
+            "duration":"3 nuits",
+            "price":"110 - 135",
+            "instructions":"Nightjet Paris-Vienne* (50€), puis train de nuit Vienne- Bucarest (50€) que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). Pour finir, le Bosphorus Express est un train de nuit qui ne circule qu'entre avril et début octobre (et par chance on y sera en septembre !) et se réserve directement en gare de Bucarest ou Istanbul. Le départ a lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix : 10€ à 35€ en fonction du nombre de personnes dans la cabine-couchette.",
+            "velo_transport":"manque d'information"
+          }
+        ],
+        "co2eq_avion":431,
+        "co2eq_train":15.8,
         "co2eq_bus":0
       }
     ]
@@ -553,9 +679,30 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Paris - Milan 5h puis Milan - Bru train de nuit 10h et ensuite ferry de nuit jusqu'à Durres (30€). Possible de rejoindre Tirana en bus 45 minutes.",
+        "options":[
+          {
+            "duration":"5h + 2 nuits",
+            "price":"120",
+            "instructions":"TGV Paris Milan (5h, 30 € en avance), puis train Milan-Bari avec Trenitalia, de jour, 6h30 ou de nuit (10h, 50 € pour une couchette), et ensuite ferry de nuit jusqu'à Durres (avec GNV ou Adria Ferry, 9h, environ 30€). Possible ensuite de rejoindre Tirana en bus, 45 minutes.",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":592,
-        "co2eq_train":11.7,
+        "co2eq_train":14.2,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "options":[
+          {
+            "duration":"3h + 2 nuits",
+            "price":"110",
+            "instructions":"TGV Paris Milan (5h, 20 €) puis train Milan-Bari avec Trenitalia, de jour, 6h30 ou de nuit, 10h, environ 30 € + 36 € pour une couchette, et ensuite ferry de nuit jusqu'à Durres (avec GNV ou Adria Ferry, 9h, environ 30€). Possible ensuite de rejoindre Tirana en bus, 45 minutes.",
+            "velo_transport":"manque d'information"
+          }
+        ],
+        "co2eq_avion":478,
+        "co2eq_train":11.53,
         "co2eq_bus":0
       }
     ]
@@ -570,33 +717,36 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "options":[
+          {
+            "duration":"10h + nuit",
+            "price":"135",
+            "instructions":"Train Paris-Stuttgart (Deutsche Bahn,3h15 de train. 50€), puis Stuttgart Zagreb (Train de nuit OBB, 10h, 55€) et enfin Zagreb-Split (HZPP, 6h30, 30€, les billets peuvent se prendre directement à la gare de Zagreb en machine).",
+            "velo_transport":"manque d'information"
+          },
+          {
+            "duration":"9h + nuit",
+            "price":"90",
+            "instructions":"TRain Paris-Stuttgart (Deutsche Bahn,3h15 de train. 50€), puis Stuttgart Zagreb (Train de nuit OBB, 10h, 55€) et enfin Zagreb-Split (HZPP, 6h30, 30€, les billets peuvent se prendre directement à la gare de Zagreb en machine).",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
         "co2eq_avion":463,
         "co2eq_train":11,
         "co2eq_bus":0
       },
       {
         "from":"Lyon",
-        "instructions":"Option 1 : Paris stuttgart: 3h15 ; Stuttgart Zagreb: 10h de train de nuit puis bus Zagreb Split: 6h30 ; Pour venir Depuis Lyon il faut faire Lyon-Karlsruhe puis Karlruhe-Stuttgart ; Aller jusqu'à Milan, puis train direct jusqu'à Ancône et enfin ferry de nuit (~30 €)",
+        "options":[
+          {
+            "duration":"13h + nuit",
+            "price":"145",
+            "instructions":"Il faut faire Lyon-Strasbourg (4h) enchainer sur le Strasbourg-Stuttgart(1h30) puis Stuttgart Zagreb (Train de nuit OBB, 10h, 55€) et enfin Zagreb-Split (HZPP, 6h30, 30€, les billets peuvent se prendre directement à la gare de Zagreb en machine).",
+            "velo_transport":"manque d'information"
+          }
+        ],
         "co2eq_avion":492,
-        "co2eq_train":8.77,
-        "co2eq_bus":0
-      }
-    ]
-  },
-  {
-    "fid": 23,
-    "ville": "Ljubljana",
-    "pays": "Slovénie",
-    "lat": 46.0500268,
-    "long": 14.5069289,
-    "city": "Ljubljana",
-    "origins":[
-      {
-        "from":"Paris",
-        "instructions":"",
-        "co2eq_avion":499,
-        "co2eq_train":8.01,
+        "co2eq_train":9.1,
         "co2eq_bus":0
       }
     ]
@@ -611,7 +761,6 @@
     "origins":[
       {
         "from":"",
-        "instructions":"",
         "co2eq_avion":"",
         "co2eq_train":"",
         "co2eq_bus":0
