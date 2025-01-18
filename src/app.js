@@ -310,12 +310,12 @@ async function main() {
           </span>
           <div class="mode">
             <i class="ph ph-train-simple">
-            </i><span>${e['co2eq_train']} kg CO₂</span>
+            </i><span><b style="font-size:1.5em">${e['co2eq_train']}</b> kg CO₂</span>
           </div>
           contre
           <div class="mode">
             <i class="ph ph-airplane-tilt"></i>
-            <span>${e['co2eq_avion']} kg CO₂ (soit <b>${avion_fois_moins}</b> fois plus que le train)</span>
+            <span><b style="font-size:1.5em">${e['co2eq_avion']}</b> kg CO₂ (soit <b>${avion_fois_moins}</b> fois plus que le train)</span>
           </div>
         </div>
       </div>
