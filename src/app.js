@@ -321,6 +321,16 @@ async function main() {
       </div>
       `
     })
+
+    ficheVille.innerHTML += `
+    <br><div style="font-size:.85em;font-weight:400">
+      Sites et services utilisés :
+      <ul>
+        <li>Calcul d'itinéraires: Mollow, Hourail, SNCF connect</li>
+        <li>Calcul de l'empreinte carbone : Simulateur d'impact Co2 de l'Ademe</li>
+      </ul>
+    </div>
+    `
       
     if (isMobile()) {
       panel.style.height = `${80}%`;
