@@ -287,39 +287,45 @@ async function main() {
         <p><i>Depuis ${e['from']}</i></p>
       </div>
       `
-      // ajout itinéraires et détails
-      e['options'].forEach(option => {
-        ficheVille.innerHTML += `
-        <div class="option-details">
-          <p><img class="picto-velo" src="${getIconVelo(option['velo_transport'])}" title="${option['velo_transport']}"/>
-          ${option['instructions']}</p>
-          <p><span class="tag-option">Durée :</span> ${option['duration']}</p>
-          <p><span class="tag-option">Transport de vélo : </span>${option['velo_transport']}</p>
-          <p><span class="tag-option">Prix € :</span> ${option['price']}</p>
-        </div>
-        `
-      })
-      
-      avion_fois_moins = Math.round(e['co2eq_avion'] / e['co2eq_train'])
+      if(e['options']) {
+        // ajout itinéraires et détails
+        e['options'].forEach(option => {
+          ficheVille.innerHTML += `
+          <div class="option-details">
+            <p><img class="picto-velo" src="${getIconVelo(option['velo_transport'])}" title="${option['velo_transport']}"/>
+            ${option['instructions']}</p>
+            <p><span class="tag-option">Durée :</span> ${option['duration']}</p>
+            <p><span class="tag-option">Transport de vélo : </span>${option['velo_transport']}</p>
+            <p><span class="tag-option">Prix € :</span> ${option['price']}</p>
+          </div>
+          `
+        })
+      }
+
+      let avion_fois_moins = Math.round(e['co2eq_avion'] / e['co2eq_train'])
+      let avion_fois_moins_phrase = avion_fois_moins ? `(soit <b>${avion_fois_moins}</b> fois plus que le train)` : ""
 
       // ajout bilan carbone
-      ficheVille.innerHTML += `
-        <div class="bilan-carbone">
-          <span class="title">
-            Bilan carbone depuis ${e['from']}
-          </span>
-          <div class="mode">
-            <i class="ph ph-train-simple">
-            </i><span><b style="font-size:1.5em">${e['co2eq_train']}</b> kg CO₂</span>
-          </div>
-          contre
-          <div class="mode">
-            <i class="ph ph-airplane-tilt"></i>
-            <span><b style="font-size:1.5em">${e['co2eq_avion']}</b> kg CO₂ (soit <b>${avion_fois_moins}</b> fois plus que le train)</span>
+      if(e['co2eq_train'] != "" || e['co2eq_avion'] != "") {
+        ficheVille.innerHTML += `
+          <div class="bilan-carbone">
+            <span class="title">
+              Bilan carbone depuis ${e['from']}
+            </span>
+            <div class="mode">
+              <i class="ph ph-train-simple">
+              </i><span><b style="font-size:1.5em">${e['co2eq_train']}</b> kg CO₂</span>
+            </div>
+            contre
+            <div class="mode">
+              <i class="ph ph-airplane-tilt"></i>
+              <span><b style="font-size:1.5em">${e['co2eq_avion']}</b> kg CO₂${avion_fois_moins_phrase}</span>
+            </div>
           </div>
         </div>
-      </div>
-      `
+        `
+      }
+
     })
 
     ficheVille.innerHTML += `

@@ -9,17 +9,16 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Train de nuit direct",
         "options":[
           {
             "duration":"6h 30",
-            "price":"70 €",
+            "price":"70",
             "instructions":"Train direct TGV InOui. On vous conseille de le réserver à l’avance",
             "velo_transport":"autorisé si démonté"
           },
           {
             "duration":"Nuit + 2h",
-            "price":"70-80 €",
+            "price":"70 - 80",
             "instructions":"Alternative afin de ne pas démonter son vélo : TGV jusqu’à Perpignan (train de nuit ou de jour) en réservant un emplacement vélo non démonté puis prendre un Flixbus avec réservation pour vélo non-démonté.",
             "velo_transport":"autorisé"
           }
@@ -30,17 +29,16 @@
       },
       {
         "from":"Lyon",
-        "instructions":"Train de nuit direct",
         "options":[
           {
-            "duration":"5h40",
+            "duration":"5h 40",
             "price":"50",
             "instructions":"Train direct Renfe. On vous conseille de réserver à l’avance",
             "velo_transport":"autorisé si démonté"
           },
           {
-            "duration":"6h30",
-            "price":"60-70 €",
+            "duration":"6h 30",
+            "price":"60 - 70",
             "instructions":"Afin de ne pas démonter son vélo, il est possible de prendre un TGV jusqu’à Montpellier (2h) en réservant un espace vélo non démonté puis en prenant un Flixbus avec réservation vélo non démonté (4h30).",
             "velo_transport":"autorisé"
           }
@@ -51,7 +49,6 @@
       },
       {
         "from":"Épinal",
-        "instructions":"En passant par Épinal",
         "options":[
           {
             "duration":"9h",
@@ -76,7 +73,6 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
         "options":[
           {
             "duration":"12h30",
@@ -91,10 +87,9 @@
       },
       {
         "from":"Lyon",
-        "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
         "options":[
           {
-            "duration":"11h30",
+            "duration":"11h 30",
             "price":"90-120",
             "instructions":"Train direct Renfe Lyon-Barcelone. On vous conseille de réserver à l’avance. Puis train jusqu’à Séville, Renfe AVE ou Iryo, on vous conseille de vous y prendre en avance pour avoir les meilleurs prix.",
             "velo_transport":"autorisé si démonté"
@@ -119,13 +114,13 @@
         "options":[
           {
             "duration":"22h",
-            "price":"50-70",
+            "price":"50 - 70",
             "instructions":"Flixbus direct",
             "velo_transport":"interdit"
           },
           {
             "duration":"9h + nuit",
-            "price":"90-120",
+            "price":"90 - 120",
             "instructions":"Train direct TGV InOui Paris-Barcelone. Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
             "velo_transport":"autorisé si démonté"
           }
@@ -139,8 +134,8 @@
         "options":[
           {
             "duration":"8h + nuit",
-            "price":"90-120",
-            "instructions":"Train direct Renfe Lyon-Barcelone. Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
+            "price":"90 - 120",
+            "instructions":"Train direct Renfe Lyon-Barcelone. Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15 - 20€)",
             "velo_transport":"autorisé si démonté"
           }
         ],
@@ -163,7 +158,7 @@
         
         "options":[
           {
-            "duration":"4h45",
+            "duration":"4h 45",
             "price":"Variable, voir SNCF Connect",
             "instructions":"TGV direct depuis Paris, possibilité de réserver un emplacement vélo",
             "velo_transport":"autorisé"
@@ -185,10 +180,9 @@
       "origins":[
         {
           "from":"Paris",
-          
           "options":[
             {
-              "duration":"5h30 de jour ou 7h de nuit",
+              "duration":"5h 30 de jour ou 7h de nuit",
               "price":"Variable, voir SNCF Connect",
               "instructions":"Cahors TGV ou Intercités direct depuis Paris, possibilité de réserver un emplacement vélo non-démonté.",
               "velo_transport":"autorisé"
@@ -237,10 +231,16 @@
         "from":"Paris",
         "options":[
           {
-            "duration":"3h45",
-            "price":"",
-            "instructions":"TGV direct Paris-Grenoble, voir SNCF Connect",
+            "duration":"3h 45",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TGV direct Paris-Grenoble",
             "velo_transport":"autorisé si démonté"
+          },
+          {
+            "duration":"3h 45",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TGV Paris-Lyon avec réservation du vélo non-démonté puis TER Lyon-Grenoble sans réservation obligatoire pour un vélo non démonté.",
+            "velo_transport":"autorisé"
           }
         ],
         "co2eq_avion":"",
@@ -259,12 +259,17 @@
     "origins":[
       {
         "from":"Paris",
-        
         "options":[
           {
-            "duration":"2h45",
+            "duration":"2h 45",
             "price":"Variable, voir SNCF Connect",
             "instructions":"TER direct Paris Dijon sans réservation obligatoire pour un vélo non démonté.",
+            "velo_transport":"autorisé"
+          },
+          {
+            "duration":"3h 15",
+            "price":"Variable, voir SNCF Connect",
+            "instructions":"TER Paris Dijonpuis TER jusqu’à Besançon, vélos non démontés acceptés, sans réservation.",
             "velo_transport":"autorisé"
           }
         ],
@@ -287,7 +292,7 @@
         
         "options":[
           {
-            "duration":"3h15",
+            "duration":"3h 15",
             "price":"Variable, voir SNCF Connect",
             "instructions":"TER Paris-Dijon, puis TER jusqu’à Besançon, vélos non démontés acceptés, sans réservation.",
             "velo_transport":"autorisé"
@@ -309,7 +314,6 @@
     "origins":[
       {
         "from":"Paris",
-        
         "options":[
           {
             "duration":"3h",
@@ -333,8 +337,7 @@
     "city": "Basel",
     "origins":[
       {
-        "from":"Paris",
-        
+        "from":"Paris",        
         "options":[
           {
             "duration":"3h",
@@ -352,6 +355,20 @@
         "co2eq_avion":214,
         "co2eq_train":3.47,
         "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",        
+        "options":[
+          {
+            "duration":"3h 30",
+            "price":"60 - 70",
+            "instructions":"Train Lyon-Mulhouse (réservation obligatoire vélo non-démonté) puis Mulhouse-Bâle",
+            "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":2.54,
+        "co2eq_bus":0
       }
     ]
   },
@@ -367,7 +384,7 @@
         "from":"Paris",
         "options":[
           {
-            "duration":"5h30",
+            "duration":"5h 30",
             "price":"60",
             "instructions":"Prix stable en s'y prenant à l'avance ; TGV Inoui direct",
             "velo_transport":"autorisé si démonté"
@@ -387,7 +404,7 @@
             "velo_transport":"autorisé si démonté"
           },
           {
-            "duration":"12h30",
+            "duration":"12h 30",
             "price":"30",
             "instructions":"Bus de nuit avec Flixbus, penser à réserver un emplacement vélo non démonté.",
             "velo_transport":"autorisé"
@@ -482,7 +499,7 @@
         "from":"Lyon",
         "options":[
           {
-            "duration":"4h45 + nuit",
+            "duration":"4h 45 + nuit",
             "price":"40 - 70",
             "instructions":"Prendre TGV jusqu’à Milan puis prendre un train de nuit jusqu’à Vienne, ce train de nuit part tous les jours à 21h26 de Milan, et arrive le lendemain matin à 8h52 à Vienne, parfait pour démarrer une visite de la ville. Enfin, prendre un train direct Vienne -Bratislava (1h, 10-20 €)",
             "velo_transport":"manque d'information"
@@ -519,7 +536,7 @@
             "velo_transport":"manque d'information"
           },
           {
-            "duration":"Nuit + 2h30",
+            "duration":"Nuit + 2h 30",
             "price":"45 - 70",
             "instructions":"Prendre train de nuit nightjet Paris-Vienne, il est possible de passer la nuit dans un siège pour 30€ ou dans une couchette (cabines de 4 à 6) pour 50€. On ne peut pas réserver les billets sur SNCF Connect, il faut aller sur le site de nightjet directement. Puis train Vienne – Budapest avec Regiojet.",
             "velo_transport":"manque d'information"
@@ -684,8 +701,8 @@
     "fid": 20,
     "ville": "Igoumenitsa",
     "pays": "Grèce",
-    "lat": 37.9755648,
-    "long": 23.7348324,
+    "lat": 39.50565961472071,
+    "long": 20.2644525,
     "city": "Αθήνα",
     "origins":[
       {
