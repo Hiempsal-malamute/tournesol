@@ -12,7 +12,7 @@
         "instructions":"Train de nuit direct",
         "options":[
           {
-            "duration":"6h 30, 50",
+            "duration":"6h 30",
             "price":"70 €",
             "instructions":"Train direct TGV InOui. On vous conseille de le réserver à l’avance",
             "velo_transport":"autorisé si démonté"
@@ -54,7 +54,7 @@
         "instructions":"En passant par Épinal",
         "options":[
           {
-            "duration":"",
+            "duration":"9h",
             "price":"50",
             "instructions":"Prendre un TGV ou TER jusqu’à Paris puis voir les options proposées depuis Paris et Lyon.",
             "velo_transport":"autorisé si démonté"
@@ -75,18 +75,33 @@
     "city": "Sevilla",
     "origins":[
       {
-        "from":"Barcelone",
+        "from":"Paris",
         "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
         "options":[
           {
-            "duration":"6h",
-            "price":"50",
-            "instructions":"Voir comment se rendre à Barcelone (les infos sont disponibles sur la carte en cliquant sur la ville de Barcelone), puis train jusqu’à Séville, Renfe AVE ou Iryo, on vous conseille de vous y prendre en avance pour avoir les meilleurs prix.",
+            "duration":"12h30",
+            "price":"100-120",
+            "instructions":"Train direct TGV InOui Paris-Barcelone.Puis train jusqu’à Séville, Renfe AVE ou Iryo, on vous conseille de vous y prendre en avance pour avoir les meilleurs prix.",
             "velo_transport":"autorisé si démonté"
           }
         ],
-        "co2eq_avion":"",
-        "co2eq_train":"",
+        "co2eq_avion":541,
+        "co2eq_train":10,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "instructions":"Il existe 2 trains directs par jour Barcelone Séville de 6h",
+        "options":[
+          {
+            "duration":"11h30",
+            "price":"90-120",
+            "instructions":"Train direct Renfe Lyon-Barcelone. On vous conseille de réserver à l’avance. Puis train jusqu’à Séville, Renfe AVE ou Iryo, on vous conseille de vous y prendre en avance pour avoir les meilleurs prix.",
+            "velo_transport":"autorisé si démonté"
+          }
+        ],
+        "co2eq_avion":485,
+        "co2eq_train":10,
         "co2eq_bus":0
       }
     ]
@@ -101,39 +116,36 @@
     "origins":[
       {
         "from":"Paris",
-        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
         "options":[
           {
             "duration":"22h",
             "price":"50-70",
             "instructions":"Flixbus direct",
             "velo_transport":"interdit"
+          },
+          {
+            "duration":"9h + nuit",
+            "price":"90-120",
+            "instructions":"Train direct TGV InOui Paris-Barcelone. Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
+            "velo_transport":"autorisé si démonté"
           }
         ],
         "co2eq_avion":545,
         "co2eq_train":12.3,
-        "co2eq_bus":0
+        "co2eq_bus":102
       },
       {
         "from":"Lyon",
-        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
         "options":[
           {
-            "duration":"2h30 + nuit",
-            "price":"30-50",
-            "instructions":"Voir comment se rendre à Barcelone (les infos sont disponibles sur la carte en cliquant sur la ville de Barcelone). Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
+            "duration":"8h + nuit",
+            "price":"90-120",
+            "instructions":"Train direct Renfe Lyon-Barcelone. Puis aller jusqu’à Madrid, avec Ouigo, AVE ou Avlo, 2h30, 20-30€ puis prendre un bus de nuit Madrid – Lisbonne avec Gipsy (8h), 10€ en s’y prenant à l’avance ou en bus de jour avec Flixbus pour (15-20€)",
             "velo_transport":"autorisé si démonté"
           }
         ],
-        "co2eq_avion":521,
-        "co2eq_train":10.6,
-        "co2eq_bus":0
-      },
-      {
-        "from":"Épinal",
-        "instructions":"Depuis Barcelone, prendre train jusqu'à Madrid de jour 2h30 puis prendre bus de nuit jusqu'à Lisbonne (20aine d'euros)",
-        "co2eq_avion":613,
-        "co2eq_train":12.9,
+        "co2eq_avion":520,
+        "co2eq_train":10.62,
         "co2eq_bus":0
       }
     ]
@@ -205,6 +217,30 @@
             "price":"Variable, voir SNCF Connect",
             "instructions":"TGV direct depuis Paris, possibilité de réserver un emplacement vélo non-démonté.",
             "velo_transport":"autorisé"
+          }
+        ],
+        "co2eq_avion":"",
+        "co2eq_train":"",
+        "co2eq_bus":0
+      }
+    ]
+  },
+  {
+    "fid": 24,
+    "ville": "Grenoble",
+    "pays": "France",
+    "lat": 45.1875602,
+    "long": 5.7357819,
+    "city": "Grenoble",
+    "origins":[
+      {
+        "from":"Paris",
+        "options":[
+          {
+            "duration":"3h45",
+            "price":"",
+            "instructions":"TGV direct Paris-Grenoble, voir SNCF Connect",
+            "velo_transport":"autorisé si démonté"
           }
         ],
         "co2eq_avion":"",
@@ -329,7 +365,6 @@
     "origins":[
       {
         "from":"Paris",
-        
         "options":[
           {
             "duration":"5h30",
@@ -354,7 +389,7 @@
           {
             "duration":"12h30",
             "price":"30",
-            "instructions":"Bus de nuit avec Flixbus, penser à réserver un emplacement vélo non démonté).",
+            "instructions":"Bus de nuit avec Flixbus, penser à réserver un emplacement vélo non démonté.",
             "velo_transport":"autorisé"
           }
         ],
@@ -647,7 +682,7 @@
   },
   {
     "fid": 20,
-    "ville": "Athènes",
+    "ville": "Igoumenitsa",
     "pays": "Grèce",
     "lat": 37.9755648,
     "long": 23.7348324,
@@ -657,14 +692,28 @@
         "from":"Paris",
         "options":[
           {
-            "duration":"3 nuits",
-            "price":"110 - 135",
-            "instructions":"Nightjet Paris-Vienne* (50€), puis train de nuit Vienne- Bucarest (50€) que l’on peut réserver directement sur la page de la compagnie ferroviaire roumaine (CFR Celatori). Pour finir, le Bosphorus Express est un train de nuit qui ne circule qu'entre avril et début octobre (et par chance on y sera en septembre !) et se réserve directement en gare de Bucarest ou Istanbul. Le départ a lieu à 10h55 de la gare de Bucarest pour une arrivée à Istanbul à 5h34 du matin le lendemain. Prix : 10€ à 35€ en fonction du nombre de personnes dans la cabine-couchette.",
+            "duration":"5h + 2 nuits",
+            "price":"140",
+            "instructions":"TGV Paris Milan (5h, 30€ en avance) puis train de nuit Milan Bari (10h, 50€ en couchette) et enfin ferry de nuit jusqu'à Igoumenista (plusieurs compagnies le proposent 11h, 60€). <br>Nb : Depuis Igoumenista, il est facile de rejoindre de nombreuses autres villes en Grèce.",
             "velo_transport":"manque d'information"
           }
         ],
-        "co2eq_avion":431,
-        "co2eq_train":15.8,
+        "co2eq_avion":660,
+        "co2eq_train":17.2,
+        "co2eq_bus":0
+      },
+      {
+        "from":"Lyon",
+        "options":[
+          {
+            "duration":"3h + 2 nuits",
+            "price":"130",
+            "instructions":"TGV Lyon-Milan (5h, 30€ en avance) puis train de nuit Milan Bari (10h, 50€ en couchette) et enfin ferry de nuit jusqu'à Igoumenista (plusieurs compagnies le proposent 11h, 60€).<br>Nb : Depuis Igoumenista, il est facile de rejoindre de nombreuses autres villes en Grèce.",
+            "velo_transport":"manque d'information"
+          }
+        ],
+        "co2eq_avion":412,
+        "co2eq_train":13.5,
         "co2eq_bus":0
       }
     ]
@@ -697,7 +746,7 @@
           {
             "duration":"3h + 2 nuits",
             "price":"110",
-            "instructions":"TGV Paris Milan (5h, 20 €) puis train Milan-Bari avec Trenitalia, de jour, 6h30 ou de nuit, 10h, environ 30 € + 36 € pour une couchette, et ensuite ferry de nuit jusqu'à Durres (avec GNV ou Adria Ferry, 9h, environ 30€). Possible ensuite de rejoindre Tirana en bus, 45 minutes.",
+            "instructions":"TGV Lyon Milan (5h, 20 €) puis train Milan-Bari avec Trenitalia, de jour, 6h30 ou de nuit, 10h, environ 30 € + 36 € pour une couchette, et ensuite ferry de nuit jusqu'à Durres (avec GNV ou Adria Ferry, 9h, environ 30€). Possible ensuite de rejoindre Tirana en bus, 45 minutes.",
             "velo_transport":"manque d'information"
           }
         ],
@@ -727,7 +776,7 @@
           {
             "duration":"9h + nuit",
             "price":"90",
-            "instructions":"TRain Paris-Stuttgart (Deutsche Bahn,3h15 de train. 50€), puis Stuttgart Zagreb (Train de nuit OBB, 10h, 55€) et enfin Zagreb-Split (HZPP, 6h30, 30€, les billets peuvent se prendre directement à la gare de Zagreb en machine).",
+            "instructions":"Train Paris-Stuttgart (Deutsche Bahn, 3h15 de train, 50€), puis Stuttgart Zagreb (Train de nuit OBB, 10h, 55€) et enfin Zagreb-Split (HZPP, 6h30, 30€, les billets peuvent se prendre directement à la gare de Zagreb en machine).",
             "velo_transport":"autorisé si démonté"
           }
         ],
@@ -747,22 +796,6 @@
         ],
         "co2eq_avion":492,
         "co2eq_train":9.1,
-        "co2eq_bus":0
-      }
-    ]
-  },
-  {
-    "fid": 24,
-    "ville": "Grenoble",
-    "pays": "France",
-    "lat": 45.1875602,
-    "long": 5.7357819,
-    "city": "Grenoble",
-    "origins":[
-      {
-        "from":"",
-        "co2eq_avion":"",
-        "co2eq_train":"",
         "co2eq_bus":0
       }
     ]
